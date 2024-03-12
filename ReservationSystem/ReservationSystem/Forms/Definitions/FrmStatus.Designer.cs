@@ -28,22 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.grdStatus = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grdStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // grdStatus
+            // 
+            this.grdStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdStatus.Location = new System.Drawing.Point(0, 0);
+            this.grdStatus.MainView = this.gridView1;
+            this.grdStatus.Name = "grdStatus";
+            this.grdStatus.Size = new System.Drawing.Size(494, 421);
+            this.grdStatus.TabIndex = 0;
+            this.grdStatus.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.grdStatus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // FrmStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 421);
+            this.Controls.Add(this.grdStatus);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmStatus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Durum Tanımlamaları";
+            this.Load += new System.EventHandler(this.FrmStatus_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grdStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private DevExpress.XtraGrid.GridControl grdStatus;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }
