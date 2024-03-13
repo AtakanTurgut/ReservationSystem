@@ -128,19 +128,100 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Definitions\FrmCase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmCase.Designer.cs">
+      <DependentUpon>FrmCase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmCountry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmCountry.Designer.cs">
+      <DependentUpon>FrmCountry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmDepartment.Designer.cs">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmMission.Designer.cs">
+      <DependentUpon>FrmMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmPhone.Designer.cs">
+      <DependentUpon>FrmPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmProductCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmProductCategory.Designer.cs">
+      <DependentUpon>FrmProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmRate.Designer.cs">
+      <DependentUpon>FrmRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmRoom.Designer.cs">
+      <DependentUpon>FrmRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Definitions\FrmStatus.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Definitions\FrmStatus.Designer.cs">
       <DependentUpon>FrmStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Definitions\FrmUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmUnit.Designer.cs">
+      <DependentUpon>FrmUnit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmCase.resx">
+      <DependentUpon>FrmCase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmCountry.resx">
+      <DependentUpon>FrmCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmDepartment.resx">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmMission.resx">
+      <DependentUpon>FrmMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmPhone.resx">
+      <DependentUpon>FrmPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmProductCategory.resx">
+      <DependentUpon>FrmProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmRate.resx">
+      <DependentUpon>FrmRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmRoom.resx">
+      <DependentUpon>FrmRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Definitions\FrmStatus.resx">
       <DependentUpon>FrmStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmUnit.resx">
+      <DependentUpon>FrmUnit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -176,6 +257,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Entities\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

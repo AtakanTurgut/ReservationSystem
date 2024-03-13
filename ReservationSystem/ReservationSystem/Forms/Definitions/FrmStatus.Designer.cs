@@ -89,19 +89,19 @@
             this.durumuSilToolStripMenuItem,
             this.vazgeçToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip.Size = new System.Drawing.Size(134, 48);
             // 
             // durumuSilToolStripMenuItem
             // 
             this.durumuSilToolStripMenuItem.Name = "durumuSilToolStripMenuItem";
-            this.durumuSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.durumuSilToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.durumuSilToolStripMenuItem.Text = "Durumu Sil";
             this.durumuSilToolStripMenuItem.Click += new System.EventHandler(this.durumuSilToolStripMenuItem_Click);
             // 
             // vazgeçToolStripMenuItem
             // 
             this.vazgeçToolStripMenuItem.Name = "vazgeçToolStripMenuItem";
-            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.vazgeçToolStripMenuItem.Text = "Vazgeç";
             // 
             // FrmStatus

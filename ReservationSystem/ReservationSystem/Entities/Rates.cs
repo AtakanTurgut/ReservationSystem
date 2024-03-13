@@ -16,10 +16,10 @@ namespace ReservationSystem.Entities
     {
         public int RateId { get; set; }
         public string RateName { get; set; }
-        public decimal ExchangeRate { get; set; }
+        public Nullable<decimal> ExchangeRate { get; set; }
         public string Symbol { get; set; }
-        public System.DateTime Date { get; set; }
-        public int StatusId { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<int> StatusId { get; set; }
     
         public virtual Statuses Statuses { get; set; }
     }

@@ -23,9 +23,9 @@ namespace ReservationSystem.Entities
         public string Description { get; set; }
         public string Photograph1 { get; set; }
         public string Photograph2 { get; set; }
-        public int CountryId { get; set; }
-        public int RoomId { get; set; }
-        public int StatusId { get; set; }
+        public Nullable<int> CountryId { get; set; }
+        public Nullable<int> RoomId { get; set; }
+        public Nullable<int> StatusId { get; set; }
     
         public virtual Countries Countries { get; set; }
         public virtual Rooms Rooms { get; set; }

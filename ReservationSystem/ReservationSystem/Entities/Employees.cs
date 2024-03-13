@@ -20,11 +20,11 @@ namespace ReservationSystem.Entities
         public string Address { get; set; }
         public string Mail { get; set; }
         public string Phone { get; set; }
-        public System.DateTime StartingDate { get; set; }
-        public System.DateTime QuittingDate { get; set; }
-        public int DepartmentId { get; set; }
-        public int MissionId { get; set; }
-        public int StatusId { get; set; }
+        public Nullable<System.DateTime> StartingDate { get; set; }
+        public Nullable<System.DateTime> QuittingDate { get; set; }
+        public Nullable<int> DepartmentId { get; set; }
+        public Nullable<int> MissionId { get; set; }
+        public Nullable<int> StatusId { get; set; }
         public string Description { get; set; }
     
         public virtual Departments Departments { get; set; }

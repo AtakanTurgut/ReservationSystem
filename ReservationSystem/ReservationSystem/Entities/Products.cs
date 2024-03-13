@@ -16,12 +16,12 @@ namespace ReservationSystem.Entities
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; }
-        public decimal Price { get; set; }
-        public int ProductCategoryId { get; set; }
-        public int UnitId { get; set; }
-        public decimal Total { get; set; }
-        public byte Kdv { get; set; }
-        public int StatusId { get; set; }
+        public Nullable<decimal> Price { get; set; }
+        public Nullable<int> ProductCategoryId { get; set; }
+        public Nullable<int> UnitId { get; set; }
+        public Nullable<decimal> Total { get; set; }
+        public Nullable<byte> Kdv { get; set; }
+        public Nullable<int> StatusId { get; set; }
     
         public virtual ProductCategories ProductCategories { get; set; }
         public virtual Statuses Statuses { get; set; }

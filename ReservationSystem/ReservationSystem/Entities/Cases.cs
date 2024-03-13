@@ -16,10 +16,10 @@ namespace ReservationSystem.Entities
     {
         public int CaseId { get; set; }
         public string CaseName { get; set; }
-        public decimal Accumulation { get; set; }
-        public decimal Inside { get; set; }
-        public decimal OutTo { get; set; }
-        public int StatusId { get; set; }
+        public Nullable<decimal> Accumulation { get; set; }
+        public Nullable<decimal> Inside { get; set; }
+        public Nullable<decimal> OutTo { get; set; }
+        public Nullable<int> StatusId { get; set; }
     
         public virtual Statuses Statuses { get; set; }
     }

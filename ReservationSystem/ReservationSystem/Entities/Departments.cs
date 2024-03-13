@@ -24,7 +24,7 @@ namespace ReservationSystem.Entities
         public int DepartmentId { get; set; }
         public string DepartmentName { get; set; }
         public string Phone { get; set; }
-        public int StatusId { get; set; }
+        public Nullable<int> StatusId { get; set; }
     
         public virtual Statuses Statuses { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

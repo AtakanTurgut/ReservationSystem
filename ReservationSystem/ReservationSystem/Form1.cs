@@ -22,5 +22,59 @@ namespace ReservationSystem
             Forms.Definitions.FrmStatus FrmStatus = new Forms.Definitions.FrmStatus();
             FrmStatus.Show();
         }
+
+        private void btnUnitDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmUnit FrmUnit = new Forms.Definitions.FrmUnit();
+            FrmUnit.Show();
+        }
+
+        private void btnDepartmentDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmDepartment FrmDepartment = new Forms.Definitions.FrmDepartment();
+            FrmDepartment.Show();
+        }
+
+        private void btnMissionDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmMission FrmMission = new Forms.Definitions.FrmMission();
+            FrmMission.Show();
+        }
+
+        private void btnCaseDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmCase FrmCase = new Forms.Definitions.FrmCase();
+            FrmCase.Show();
+        }
+
+        private void btnRateDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmRate FrmRate = new Forms.Definitions.FrmRate();
+            FrmRate.Show();
+        }
+
+        private void btnRoomDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmRoom FrmRoom = new Forms.Definitions.FrmRoom();
+            FrmRoom.Show();
+        }
+
+        private void btnPhoneDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmPhone FrmPhone = new Forms.Definitions.FrmPhone();
+            FrmPhone.Show();
+        }
+
+        private void btnCountryDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmCountry FrmCountry = new Forms.Definitions.FrmCountry();
+            FrmCountry.Show();
+        }
+
+        private void btnProductCategoryDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmProductCategory FrmProductCategory = new Forms.Definitions.FrmProductCategory();
+            FrmProductCategory.Show();
+        }
     }
 }

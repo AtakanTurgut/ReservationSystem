@@ -22,7 +22,7 @@ namespace ReservationSystem.Entities
     
         public int CountryId { get; set; }
         public string CountryName { get; set; }
-        public int StatusId { get; set; }
+        public Nullable<int> StatusId { get; set; }
     
         public virtual Statuses Statuses { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -80,3 +80,12 @@ C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.csproj.CopyComplete
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.exe
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.pdb
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Definitions.FrmUnit.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Definitions.FrmDepartment.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Definitions.FrmMission.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Definitions.FrmCase.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Definitions.FrmRate.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Definitions.FrmRoom.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Definitions.FrmPhone.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Definitions.FrmCountry.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Definitions.FrmProductCategory.resources

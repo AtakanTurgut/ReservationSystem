@@ -10,144 +10,133 @@
             <PropertyRef Name="CaseId" />
           </Key>
           <Property Name="CaseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CaseName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Accumulation" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="Inside" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="OutTo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="CaseName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Accumulation" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Inside" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="OutTo" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="StatusId" Type="int" />
         </EntityType>
         <EntityType Name="Countries">
           <Key>
             <PropertyRef Name="CountryId" />
           </Key>
           <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CountryName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="CountryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="StatusId" Type="int" />
         </EntityType>
         <EntityType Name="Customers">
           <Key>
             <PropertyRef Name="CustomerId" />
           </Key>
           <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NameSurname" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="IdentityNumber" Type="char" MaxLength="11" Nullable="false" />
-          <Property Name="Mail" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Phone" Type="nvarchar" MaxLength="30" Nullable="false" />
-          <Property Name="Address" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Photograph1" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Photograph2" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="CountryId" Type="int" Nullable="false" />
-          <Property Name="RoomId" Type="int" Nullable="false" />
-          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="NameSurname" Type="nvarchar" MaxLength="100" />
+          <Property Name="IdentityNumber" Type="char" MaxLength="11" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Photograph1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Photograph2" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryId" Type="int" />
+          <Property Name="RoomId" Type="int" />
+          <Property Name="StatusId" Type="int" />
         </EntityType>
         <EntityType Name="Departments">
           <Key>
             <PropertyRef Name="DepartmentId" />
           </Key>
           <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Phone" Type="char" MaxLength="4" Nullable="false" />
-          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="char" MaxLength="4" />
+          <Property Name="StatusId" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Employees">
           <Key>
             <PropertyRef Name="EmployeeId" />
-            <PropertyRef Name="NameSurname" />
-            <PropertyRef Name="IdentityNumber" />
-            <PropertyRef Name="Address" />
-            <PropertyRef Name="Mail" />
-            <PropertyRef Name="Phone" />
-            <PropertyRef Name="StartingDate" />
-            <PropertyRef Name="QuittingDate" />
-            <PropertyRef Name="DepartmentId" />
-            <PropertyRef Name="MissionId" />
-            <PropertyRef Name="StatusId" />
-            <PropertyRef Name="Description" />
           </Key>
           <Property Name="EmployeeId" Type="int" Nullable="false" />
-          <Property Name="NameSurname" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="IdentityNumber" Type="char" MaxLength="11" Nullable="false" />
-          <Property Name="Address" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="Mail" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Phone" Type="nvarchar" MaxLength="30" Nullable="false" />
-          <Property Name="StartingDate" Type="date" Nullable="false" />
-          <Property Name="QuittingDate" Type="date" Nullable="false" />
-          <Property Name="DepartmentId" Type="int" Nullable="false" />
-          <Property Name="MissionId" Type="int" Nullable="false" />
-          <Property Name="StatusId" Type="int" Nullable="false" />
-          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NameSurname" Type="nvarchar" MaxLength="100" />
+          <Property Name="IdentityNumber" Type="char" MaxLength="11" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="30" />
+          <Property Name="StartingDate" Type="date" />
+          <Property Name="QuittingDate" Type="date" />
+          <Property Name="DepartmentId" Type="int" />
+          <Property Name="MissionId" Type="int" />
+          <Property Name="StatusId" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Missions">
           <Key>
             <PropertyRef Name="MissionId" />
           </Key>
           <Property Name="MissionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MissionName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="DepartmentId" Type="int" Nullable="false" />
-          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="MissionName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DepartmentId" Type="int" />
+          <Property Name="StatusId" Type="int" />
         </EntityType>
         <EntityType Name="Phones">
           <Key>
             <PropertyRef Name="PhoneId" />
           </Key>
           <Property Name="PhoneId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Phone" Type="nvarchar" MaxLength="30" Nullable="false" />
-          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="30" />
+          <Property Name="StatusId" Type="int" />
         </EntityType>
         <EntityType Name="ProductCategories">
           <Key>
             <PropertyRef Name="ProductCategoryId" />
           </Key>
           <Property Name="ProductCategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ProductCategory" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="ProductCategory" Type="nvarchar" MaxLength="50" />
+          <Property Name="StatusId" Type="int" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
             <PropertyRef Name="ProductId" />
           </Key>
           <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="ProductCategoryId" Type="int" Nullable="false" />
-          <Property Name="UnitId" Type="int" Nullable="false" />
-          <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="Kdv" Type="tinyint" Nullable="false" />
-          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ProductCategoryId" Type="int" />
+          <Property Name="UnitId" Type="int" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Kdv" Type="tinyint" />
+          <Property Name="StatusId" Type="int" />
         </EntityType>
         <EntityType Name="Rates">
           <Key>
             <PropertyRef Name="RateId" />
           </Key>
           <Property Name="RateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RateName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="ExchangeRate" Type="decimal" Precision="18" Scale="4" Nullable="false" />
-          <Property Name="Symbol" Type="nvarchar" MaxLength="1" Nullable="false" />
-          <Property Name="Date" Type="date" Nullable="false" />
-          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="RateName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExchangeRate" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Symbol" Type="nvarchar" MaxLength="1" />
+          <Property Name="Date" Type="date" />
+          <Property Name="StatusId" Type="int" />
         </EntityType>
         <EntityType Name="Rooms">
           <Key>
             <PropertyRef Name="RoomId" />
           </Key>
           <Property Name="RoomId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RoomNo" Type="char" MaxLength="5" Nullable="false" />
-          <Property Name="Floor" Type="varchar" MaxLength="2" Nullable="false" />
-          <Property Name="Capacity" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="Description" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="Phone" Type="char" MaxLength="5" Nullable="false" />
-          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="RoomNo" Type="char" MaxLength="5" />
+          <Property Name="Floor" Type="varchar" MaxLength="2" />
+          <Property Name="Capacity" Type="char" MaxLength="1" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="Phone" Type="char" MaxLength="5" />
+          <Property Name="StatusId" Type="int" />
         </EntityType>
         <EntityType Name="Statuses">
           <Key>
             <PropertyRef Name="StatusId" />
           </Key>
           <Property Name="StatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="StatusName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="StatusName" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -164,11 +153,11 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="UnitId" />
           </Key>
           <Property Name="UnitId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UnitName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="50" />
+          <Property Name="StatusId" Type="int" />
         </EntityType>
         <Association Name="FK_Cases_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Cases" Type="Self.Cases" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -180,7 +169,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Countries_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Countries" Type="Self.Countries" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -192,7 +181,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Customers_Countries">
-          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="Countries" Type="Self.Countries" Multiplicity="0..1" />
           <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Countries">
@@ -204,7 +193,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Customers_Rooms">
-          <End Role="Rooms" Type="Self.Rooms" Multiplicity="1" />
+          <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1" />
           <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Rooms">
@@ -216,7 +205,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Customers_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -228,7 +217,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Departments_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Departments" Type="Self.Departments" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -240,7 +229,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Employees_Departments">
-          <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+          <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
           <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Departments">
@@ -252,7 +241,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Employees_Missions">
-          <End Role="Missions" Type="Self.Missions" Multiplicity="1" />
+          <End Role="Missions" Type="Self.Missions" Multiplicity="0..1" />
           <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Missions">
@@ -264,7 +253,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Employees_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -276,7 +265,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Missions_Departments">
-          <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+          <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
           <End Role="Missions" Type="Self.Missions" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Departments">
@@ -288,7 +277,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Missions_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Missions" Type="Self.Missions" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -300,7 +289,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Phones_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Phones" Type="Self.Phones" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -312,7 +301,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ProductCategories_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="ProductCategories" Type="Self.ProductCategories" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -324,7 +313,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Products_ProductCategories">
-          <End Role="ProductCategories" Type="Self.ProductCategories" Multiplicity="1" />
+          <End Role="ProductCategories" Type="Self.ProductCategories" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ProductCategories">
@@ -336,7 +325,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Products_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -348,7 +337,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Products_Units">
-          <End Role="Units" Type="Self.Units" Multiplicity="1" />
+          <End Role="Units" Type="Self.Units" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Units">
@@ -360,7 +349,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rates_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Rates" Type="Self.Rates" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -372,7 +361,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rooms_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Rooms" Type="Self.Rooms" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -384,7 +373,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Units_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Units" Type="Self.Units" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -512,11 +501,11 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="CaseId" />
           </Key>
           <Property Name="CaseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CaseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Accumulation" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="Inside" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="OutTo" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="CaseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Accumulation" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Inside" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="OutTo" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Cases_Statuses" FromRole="Cases" ToRole="Statuses" />
         </EntityType>
         <EntityType Name="Countries">
@@ -524,8 +513,8 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="CountryId" />
           </Key>
           <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Countries_Statuses" FromRole="Countries" ToRole="Statuses" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_Countries" FromRole="Countries" ToRole="Customers" />
         </EntityType>
@@ -534,17 +523,17 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="CustomerId" />
           </Key>
           <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NameSurname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="IdentityNumber" Type="String" MaxLength="11" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Photograph1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Photograph2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="CountryId" Type="Int32" Nullable="false" />
-          <Property Name="RoomId" Type="Int32" Nullable="false" />
-          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="NameSurname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IdentityNumber" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Photograph1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Photograph2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="RoomId" Type="Int32" />
+          <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="Countries" Relationship="Self.FK_Customers_Countries" FromRole="Customers" ToRole="Countries" />
           <NavigationProperty Name="Rooms" Relationship="Self.FK_Customers_Rooms" FromRole="Customers" ToRole="Rooms" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Customers_Statuses" FromRole="Customers" ToRole="Statuses" />
@@ -554,9 +543,9 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="DepartmentId" />
           </Key>
           <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Phone" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Departments_Statuses" FromRole="Departments" ToRole="Statuses" />
           <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Departments" FromRole="Departments" ToRole="Employees" />
           <NavigationProperty Name="Missions" Relationship="Self.FK_Missions_Departments" FromRole="Departments" ToRole="Missions" />
@@ -566,9 +555,9 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="MissionId" />
           </Key>
           <Property Name="MissionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MissionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="DepartmentId" Type="Int32" Nullable="false" />
-          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="MissionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentId" Type="Int32" />
+          <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="Departments" Relationship="Self.FK_Missions_Departments" FromRole="Missions" ToRole="Departments" />
           <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Missions" FromRole="Missions" ToRole="Employees" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Missions_Statuses" FromRole="Missions" ToRole="Statuses" />
@@ -578,9 +567,9 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="PhoneId" />
           </Key>
           <Property Name="PhoneId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Phones_Statuses" FromRole="Phones" ToRole="Statuses" />
         </EntityType>
         <EntityType Name="ProductCategories">
@@ -588,8 +577,8 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="ProductCategoryId" />
           </Key>
           <Property Name="ProductCategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ProductCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="ProductCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_ProductCategories_Statuses" FromRole="ProductCategories" ToRole="Statuses" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Products_ProductCategories" FromRole="ProductCategories" ToRole="Products" />
         </EntityType>
@@ -598,13 +587,13 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="ProductId" />
           </Key>
           <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="ProductCategoryId" Type="Int32" Nullable="false" />
-          <Property Name="UnitId" Type="Int32" Nullable="false" />
-          <Property Name="Total" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="Kdv" Type="Byte" Nullable="false" />
-          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ProductCategoryId" Type="Int32" />
+          <Property Name="UnitId" Type="Int32" />
+          <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Kdv" Type="Byte" />
+          <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="ProductCategories" Relationship="Self.FK_Products_ProductCategories" FromRole="Products" ToRole="ProductCategories" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Products_Statuses" FromRole="Products" ToRole="Statuses" />
           <NavigationProperty Name="Units" Relationship="Self.FK_Products_Units" FromRole="Products" ToRole="Units" />
@@ -614,11 +603,11 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="RateId" />
           </Key>
           <Property Name="RateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ExchangeRate" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
-          <Property Name="Symbol" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="RateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ExchangeRate" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Symbol" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Rates_Statuses" FromRole="Rates" ToRole="Statuses" />
         </EntityType>
         <EntityType Name="Rooms">
@@ -626,12 +615,12 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="RoomId" />
           </Key>
           <Property Name="RoomId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RoomNo" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Floor" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Capacity" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Phone" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="RoomNo" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="Floor" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Capacity" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_Rooms" FromRole="Rooms" ToRole="Customers" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Rooms_Statuses" FromRole="Rooms" ToRole="Statuses" />
         </EntityType>
@@ -640,7 +629,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="StatusId" />
           </Key>
           <Property Name="StatusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="StatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Cases" Relationship="Self.FK_Cases_Statuses" FromRole="Statuses" ToRole="Cases" />
           <NavigationProperty Name="Countries" Relationship="Self.FK_Countries_Statuses" FromRole="Statuses" ToRole="Countries" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_Statuses" FromRole="Statuses" ToRole="Customers" />
@@ -669,44 +658,33 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <PropertyRef Name="UnitId" />
           </Key>
           <Property Name="UnitId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UnitName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="StatusId" Type="Int32" Nullable="false" />
+          <Property Name="UnitName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Products_Units" FromRole="Units" ToRole="Products" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Units_Statuses" FromRole="Units" ToRole="Statuses" />
         </EntityType>
         <EntityType Name="Employees">
           <Key>
             <PropertyRef Name="EmployeeId" />
-            <PropertyRef Name="NameSurname" />
-            <PropertyRef Name="IdentityNumber" />
-            <PropertyRef Name="Address" />
-            <PropertyRef Name="Mail" />
-            <PropertyRef Name="Phone" />
-            <PropertyRef Name="StartingDate" />
-            <PropertyRef Name="QuittingDate" />
-            <PropertyRef Name="DepartmentId" />
-            <PropertyRef Name="MissionId" />
-            <PropertyRef Name="StatusId" />
-            <PropertyRef Name="Description" />
           </Key>
           <Property Name="EmployeeId" Type="Int32" Nullable="false" />
-          <Property Name="NameSurname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="IdentityNumber" Type="String" MaxLength="11" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="StartingDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="QuittingDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="DepartmentId" Type="Int32" Nullable="false" />
-          <Property Name="MissionId" Type="Int32" Nullable="false" />
-          <Property Name="StatusId" Type="Int32" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NameSurname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IdentityNumber" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="StartingDate" Type="DateTime" Precision="0" />
+          <Property Name="QuittingDate" Type="DateTime" Precision="0" />
+          <Property Name="DepartmentId" Type="Int32" />
+          <Property Name="MissionId" Type="Int32" />
+          <Property Name="StatusId" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Departments" Relationship="Self.FK_Employees_Departments" FromRole="Employees" ToRole="Departments" />
           <NavigationProperty Name="Missions" Relationship="Self.FK_Employees_Missions" FromRole="Employees" ToRole="Missions" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Employees_Statuses" FromRole="Employees" ToRole="Statuses" />
         </EntityType>
         <Association Name="FK_Cases_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Cases" Type="Self.Cases" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -718,7 +696,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Countries_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Countries" Type="Self.Countries" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -730,7 +708,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Customers_Countries">
-          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="Countries" Type="Self.Countries" Multiplicity="0..1" />
           <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Countries">
@@ -742,7 +720,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Customers_Rooms">
-          <End Role="Rooms" Type="Self.Rooms" Multiplicity="1" />
+          <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1" />
           <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Rooms">
@@ -754,7 +732,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Customers_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -766,7 +744,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Departments_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Departments" Type="Self.Departments" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -778,7 +756,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Employees_Departments">
-          <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+          <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
           <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Departments">
@@ -790,7 +768,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Missions_Departments">
-          <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+          <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
           <End Role="Missions" Type="Self.Missions" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Departments">
@@ -802,7 +780,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Employees_Missions">
-          <End Role="Missions" Type="Self.Missions" Multiplicity="1" />
+          <End Role="Missions" Type="Self.Missions" Multiplicity="0..1" />
           <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Missions">
@@ -814,7 +792,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Missions_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Missions" Type="Self.Missions" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -826,7 +804,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Phones_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Phones" Type="Self.Phones" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -838,7 +816,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ProductCategories_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="ProductCategories" Type="Self.ProductCategories" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -850,7 +828,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Products_ProductCategories">
-          <End Role="ProductCategories" Type="Self.ProductCategories" Multiplicity="1" />
+          <End Role="ProductCategories" Type="Self.ProductCategories" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ProductCategories">
@@ -862,7 +840,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Products_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -874,7 +852,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Products_Units">
-          <End Role="Units" Type="Self.Units" Multiplicity="1" />
+          <End Role="Units" Type="Self.Units" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Units">
@@ -886,7 +864,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rates_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Rates" Type="Self.Rates" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -898,7 +876,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rooms_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Rooms" Type="Self.Rooms" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -910,7 +888,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Employees_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
@@ -922,7 +900,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Units_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Units" Type="Self.Units" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Statuses">
