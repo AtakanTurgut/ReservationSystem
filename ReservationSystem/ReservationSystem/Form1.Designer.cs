@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCustomerList = new DevExpress.XtraBars.BarButtonItem();
             this.btnStatusDefinitions = new DevExpress.XtraBars.BarButtonItem();
             this.btnUnitDefinitions = new DevExpress.XtraBars.BarButtonItem();
             this.btnDepartmentDefinitions = new DevExpress.XtraBars.BarButtonItem();
@@ -41,6 +41,8 @@
             this.btnPhoneDefinitions = new DevExpress.XtraBars.BarButtonItem();
             this.btnCountryDefinitions = new DevExpress.XtraBars.BarButtonItem();
             this.btnProductCategoryDefinitions = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEmployeeList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNewEmployee = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -61,7 +63,7 @@
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
-            this.barButtonItem1,
+            this.btnCustomerList,
             this.btnStatusDefinitions,
             this.btnUnitDefinitions,
             this.btnDepartmentDefinitions,
@@ -71,9 +73,11 @@
             this.btnRoomDefinitions,
             this.btnPhoneDefinitions,
             this.btnCountryDefinitions,
-            this.btnProductCategoryDefinitions});
+            this.btnProductCategoryDefinitions,
+            this.btnEmployeeList,
+            this.btnNewEmployee});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 13;
+            this.ribbonControl1.MaxItemId = 15;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -84,13 +88,11 @@
             this.ribbonPage6});
             this.ribbonControl1.Size = new System.Drawing.Size(1034, 150);
             // 
-            // barButtonItem1
+            // btnCustomerList
             // 
-            this.barButtonItem1.Caption = "Müşteri Listesi";
-            this.barButtonItem1.Id = 2;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.btnCustomerList.Caption = "Müşteri Listesi";
+            this.btnCustomerList.Id = 2;
+            this.btnCustomerList.Name = "btnCustomerList";
             // 
             // btnStatusDefinitions
             // 
@@ -182,6 +184,23 @@
             this.btnProductCategoryDefinitions.Name = "btnProductCategoryDefinitions";
             this.btnProductCategoryDefinitions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductCategoryDefinitions_ItemClick);
             // 
+            // btnEmployeeList
+            // 
+            this.btnEmployeeList.Caption = "Personel Listesi";
+            this.btnEmployeeList.Id = 13;
+            this.btnEmployeeList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployeeList.ImageOptions.Image")));
+            this.btnEmployeeList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEmployeeList.ImageOptions.LargeImage")));
+            this.btnEmployeeList.Name = "btnEmployeeList";
+            // 
+            // btnNewEmployee
+            // 
+            this.btnNewEmployee.Caption = "Personel Kartı";
+            this.btnNewEmployee.Id = 14;
+            this.btnNewEmployee.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNewEmployee.ImageOptions.Image")));
+            this.btnNewEmployee.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNewEmployee.ImageOptions.LargeImage")));
+            this.btnNewEmployee.Name = "btnNewEmployee";
+            this.btnNewEmployee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewEmployee_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -202,7 +221,7 @@
             // 
             // ribbonPageGroup2
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnCustomerList);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbonPage3
@@ -214,8 +233,9 @@
             // 
             // ribbonPageGroup3
             // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnEmployeeList);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnNewEmployee);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
             // ribbonPage4
             // 
@@ -292,7 +312,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btnCustomerList;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem btnStatusDefinitions;
@@ -305,6 +325,8 @@
         private DevExpress.XtraBars.BarButtonItem btnPhoneDefinitions;
         private DevExpress.XtraBars.BarButtonItem btnCountryDefinitions;
         private DevExpress.XtraBars.BarButtonItem btnProductCategoryDefinitions;
+        private DevExpress.XtraBars.BarButtonItem btnEmployeeList;
+        private DevExpress.XtraBars.BarButtonItem btnNewEmployee;
     }
 }
 

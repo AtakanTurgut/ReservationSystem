@@ -76,5 +76,11 @@ namespace ReservationSystem
             Forms.Definitions.FrmProductCategory FrmProductCategory = new Forms.Definitions.FrmProductCategory();
             FrmProductCategory.Show();
         }
+
+        private void btnNewEmployee_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Employee.FrmEmployeeCard FrmEmployeeCard = new Forms.Employee.FrmEmployeeCard();
+            FrmEmployeeCard.Show();
+        }
     }
 }
