@@ -65,6 +65,7 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnGiveUp = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
@@ -73,8 +74,10 @@
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit11 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
+            this.lblFilePathBack = new DevExpress.XtraEditors.LabelControl();
             this.pictureEditProfile2 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEditProfile1 = new DevExpress.XtraEditors.PictureEdit();
+            this.lblFilePathFront = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl9 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
@@ -88,7 +91,6 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit14 = new DevExpress.XtraEditors.PictureEdit();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDepartment.Properties)).BeginInit();
@@ -541,10 +543,20 @@
             this.groupControl2.TabIndex = 5;
             this.groupControl2.Text = "groupControl2";
             // 
+            // btnCreate
+            // 
+            this.btnCreate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.ImageOptions.Image")));
+            this.btnCreate.Location = new System.Drawing.Point(68, 5);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(125, 40);
+            this.btnCreate.TabIndex = 2;
+            this.btnCreate.Text = "Kaydet";
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
             // btnSave
             // 
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(68, 5);
+            this.btnSave.Location = new System.Drawing.Point(199, 5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(125, 40);
             this.btnSave.TabIndex = 1;
@@ -578,7 +590,7 @@
             this.groupControl5.Location = new System.Drawing.Point(3, 3);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.ShowCaption = false;
-            this.groupControl5.Size = new System.Drawing.Size(460, 104);
+            this.groupControl5.Size = new System.Drawing.Size(460, 103);
             this.groupControl5.TabIndex = 2;
             this.groupControl5.Text = "groupControl5";
             // 
@@ -586,7 +598,7 @@
             // 
             this.txtDescription.Location = new System.Drawing.Point(116, 3);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(339, 96);
+            this.txtDescription.Size = new System.Drawing.Size(339, 95);
             this.txtDescription.TabIndex = 23;
             // 
             // labelControl11
@@ -612,14 +624,25 @@
             // 
             // groupControl6
             // 
+            this.groupControl6.Controls.Add(this.lblFilePathBack);
             this.groupControl6.Controls.Add(this.pictureEditProfile2);
             this.groupControl6.Controls.Add(this.pictureEditProfile1);
-            this.groupControl6.Location = new System.Drawing.Point(3, 113);
+            this.groupControl6.Controls.Add(this.lblFilePathFront);
+            this.groupControl6.Location = new System.Drawing.Point(3, 112);
             this.groupControl6.Name = "groupControl6";
             this.groupControl6.ShowCaption = false;
-            this.groupControl6.Size = new System.Drawing.Size(460, 117);
+            this.groupControl6.Size = new System.Drawing.Size(460, 118);
             this.groupControl6.TabIndex = 3;
             this.groupControl6.Text = "groupControl4";
+            // 
+            // lblFilePathBack
+            // 
+            this.lblFilePathBack.Location = new System.Drawing.Point(5, 61);
+            this.lblFilePathBack.Name = "lblFilePathBack";
+            this.lblFilePathBack.Size = new System.Drawing.Size(41, 13);
+            this.lblFilePathBack.TabIndex = 25;
+            this.lblFilePathBack.Text = "File Path";
+            this.lblFilePathBack.Visible = false;
             // 
             // pictureEditProfile2
             // 
@@ -629,6 +652,7 @@
             this.pictureEditProfile2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEditProfile2.Size = new System.Drawing.Size(121, 106);
             this.pictureEditProfile2.TabIndex = 1;
+            this.pictureEditProfile2.EditValueChanged += new System.EventHandler(this.pictureEditProfile2_EditValueChanged);
             // 
             // pictureEditProfile1
             // 
@@ -638,6 +662,16 @@
             this.pictureEditProfile1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEditProfile1.Size = new System.Drawing.Size(121, 106);
             this.pictureEditProfile1.TabIndex = 0;
+            this.pictureEditProfile1.EditValueChanged += new System.EventHandler(this.pictureEditProfile1_EditValueChanged);
+            // 
+            // lblFilePathFront
+            // 
+            this.lblFilePathFront.Location = new System.Drawing.Point(5, 42);
+            this.lblFilePathFront.Name = "lblFilePathFront";
+            this.lblFilePathFront.Size = new System.Drawing.Size(41, 13);
+            this.lblFilePathFront.TabIndex = 24;
+            this.lblFilePathFront.Text = "File Path";
+            this.lblFilePathFront.Visible = false;
             // 
             // xtraTabPage3
             // 
@@ -790,16 +824,6 @@
             this.radioButton1.Text = "Yetki 1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // btnCreate
-            // 
-            this.btnCreate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnCreate.Location = new System.Drawing.Point(199, 5);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(125, 40);
-            this.btnCreate.TabIndex = 2;
-            this.btnCreate.Text = "Kaydet";
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
-            // 
             // FrmEmployeeCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -857,6 +881,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit11.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
             this.groupControl6.ResumeLayout(false);
+            this.groupControl6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditProfile2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditProfile1.Properties)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
@@ -938,5 +963,7 @@
         private DevExpress.XtraEditors.DateEdit dateEditQuittingDate;
         private DevExpress.XtraEditors.DateEdit dateEditStatingDate;
         private DevExpress.XtraEditors.SimpleButton btnCreate;
+        private DevExpress.XtraEditors.LabelControl lblFilePathFront;
+        private DevExpress.XtraEditors.LabelControl lblFilePathBack;
     }
 }

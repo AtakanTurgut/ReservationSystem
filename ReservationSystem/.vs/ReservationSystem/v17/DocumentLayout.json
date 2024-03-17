@@ -50,7 +50,8 @@
               "RelativeToolTip": "ReservationSystem\\Repositories\\Repository.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAhwBgAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T19:14:19.818Z"
+              "WhenOpened": "2024-03-17T19:14:19.818Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -60,7 +61,7 @@
               "RelativeDocumentMoniker": "ReservationSystem\\Forms\\Employee\\FrmEmployeeCard.cs",
               "ToolTip": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Employee\\FrmEmployeeCard.cs",
               "RelativeToolTip": "ReservationSystem\\Forms\\Employee\\FrmEmployeeCard.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAAACIAAABBAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAASwBYAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-17T19:10:10.311Z",
               "EditorCaption": ""
@@ -74,7 +75,8 @@
               "ToolTip": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Employee\\FrmEmployeeCard.cs [Design]",
               "RelativeToolTip": "ReservationSystem\\Forms\\Employee\\FrmEmployeeCard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T18:29:10.884Z"
+              "WhenOpened": "2024-03-15T18:29:10.884Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",

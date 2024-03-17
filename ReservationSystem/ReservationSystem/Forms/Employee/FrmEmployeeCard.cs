@@ -23,6 +23,7 @@ namespace ReservationSystem.Forms.Employee
         HotelDbEntities db = new HotelDbEntities();
         Repository<Employees> repository = new Repository<Employees>();
         public int id;
+        public string defaultFilePath = "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\pictures\\default_profile.png";
 
         private void FrmEmployeeCard_Load(object sender, EventArgs e)
         {
@@ -41,10 +42,12 @@ namespace ReservationSystem.Forms.Employee
                 txtDescription.Text = employee.Description;
                 pictureEditProfile1.Image = Image.FromFile(employee.ProfileFront);
                 pictureEditProfile2.Image = Image.FromFile(employee.ProfileBack);
-                /*
-            employee.DepartmentId = int.Parse(lookUpEditDepartment.EditValue.ToString());
-            employee.MissionId = int.Parse(lookUpEditMission.EditValue.ToString());
-            employee.StatusId = int.Parse(lookUpEditStatus.EditValue.ToString());*/
+                lookUpEditDepartment.EditValue = employee.DepartmentId;
+                lookUpEditMission.EditValue = employee.MissionId;
+                lookUpEditStatus.EditValue = employee.StatusId;
+
+                lblFilePathFront.Text = employee.ProfileFront;
+                lblFilePathBack.Text = employee.ProfileBack;
             }
 
             lookUpEditDepartment.Properties.DataSource = (from x in db.Departments select new
@@ -68,7 +71,7 @@ namespace ReservationSystem.Forms.Employee
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            txtDescription.Text = pictureEditProfile1.GetLoadedImageLocation();
+            this.Close();
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -87,6 +90,16 @@ namespace ReservationSystem.Forms.Employee
             employee.MissionId = int.Parse(lookUpEditMission.EditValue.ToString());
             employee.StatusId = int.Parse(lookUpEditStatus.EditValue.ToString());
 
+            if (string.IsNullOrEmpty(employee.ProfileFront))
+            {
+                employee.ProfileFront = defaultFilePath;
+            }
+
+            if (string.IsNullOrEmpty(employee.ProfileBack))
+            {
+                employee.ProfileBack = defaultFilePath;
+            }
+
             repository.TAdd(employee);
 
             XtraMessageBox.Show("Personel başarılı bir şekilde sisteme kaydedildi.");
@@ -95,6 +108,17 @@ namespace ReservationSystem.Forms.Employee
         private void btnSave_Click(object sender, EventArgs e)
         {
             var value = repository.Find(x => x.EmployeeId == id);
+
+            if (pictureEditProfile1.EditValue == null)
+            {
+                lblFilePathFront.Text = value.ProfileFront;
+            }
+
+            if (pictureEditProfile2.EditValue == null)
+            {
+                lblFilePathBack.Text = value.ProfileBack;
+            }
+
             value.NameSurname = txtNameSurname.Text;
             value.IdentityNumber = txtIdentityNumber.Text;
             value.Address = txtAddress.Text;
@@ -102,16 +126,25 @@ namespace ReservationSystem.Forms.Employee
             value.Phone = txtPhone.Text;
             value.StartingDate = DateTime.Parse(dateEditStatingDate.Text);
             value.Description = txtDescription.Text;
-            value.ProfileFront = pictureEditProfile1.GetLoadedImageLocation();
-            value.ProfileBack = pictureEditProfile2.GetLoadedImageLocation();
-            /*
-value.DepartmentId = int.Parse(lookUpEditDepartment.EditValue.ToString());
-value.MissionId = int.Parse(lookUpEditMission.EditValue.ToString());
-value.StatusId = int.Parse(lookUpEditStatus.EditValue.ToString());
-*/
+            value.ProfileFront = lblFilePathFront.Text;
+            value.ProfileBack = lblFilePathBack.Text;
+            value.DepartmentId = int.Parse(lookUpEditDepartment.EditValue.ToString());
+            value.MissionId = int.Parse(lookUpEditMission.EditValue.ToString());
+            value.StatusId = int.Parse(lookUpEditStatus.EditValue.ToString());
+
             repository.TUpdate(value);
 
             XtraMessageBox.Show("Personel kartı bilgileri başarıyla güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void pictureEditProfile1_EditValueChanged(object sender, EventArgs e)
+        {
+            lblFilePathFront.Text = pictureEditProfile1.GetLoadedImageLocation().ToString();
+        }
+
+        private void pictureEditProfile2_EditValueChanged(object sender, EventArgs e)
+        {
+            lblFilePathBack.Text = pictureEditProfile2.GetLoadedImageLocation().ToString();
         }
 
     }
