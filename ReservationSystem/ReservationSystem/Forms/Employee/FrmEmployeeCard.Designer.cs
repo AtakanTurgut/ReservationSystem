@@ -33,6 +33,8 @@
             this.txtNameSurname = new DevExpress.XtraEditors.TextEdit();
             this.lookUpEditDepartment = new DevExpress.XtraEditors.LookUpEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.dateEditQuittingDate = new DevExpress.XtraEditors.DateEdit();
+            this.dateEditStatingDate = new DevExpress.XtraEditors.DateEdit();
             this.lookUpEditMission = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpEditStatus = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -86,13 +88,16 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit14 = new DevExpress.XtraEditors.PictureEdit();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.dateEditStatingDate = new DevExpress.XtraEditors.DateEdit();
-            this.dateEditQuittingDate = new DevExpress.XtraEditors.DateEdit();
+            this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDepartment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditQuittingDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditQuittingDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditStatingDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditStatingDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMission.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
@@ -136,10 +141,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
             this.groupControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditStatingDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditStatingDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditQuittingDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditQuittingDate.Properties.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureEdit1
@@ -203,6 +204,30 @@
             this.groupControl1.Size = new System.Drawing.Size(470, 131);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "groupControl1";
+            // 
+            // dateEditQuittingDate
+            // 
+            this.dateEditQuittingDate.EditValue = null;
+            this.dateEditQuittingDate.Location = new System.Drawing.Point(327, 98);
+            this.dateEditQuittingDate.Name = "dateEditQuittingDate";
+            this.dateEditQuittingDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditQuittingDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditQuittingDate.Size = new System.Drawing.Size(122, 20);
+            this.dateEditQuittingDate.TabIndex = 22;
+            // 
+            // dateEditStatingDate
+            // 
+            this.dateEditStatingDate.EditValue = null;
+            this.dateEditStatingDate.Location = new System.Drawing.Point(327, 69);
+            this.dateEditStatingDate.Name = "dateEditStatingDate";
+            this.dateEditStatingDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditStatingDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditStatingDate.Size = new System.Drawing.Size(122, 20);
+            this.dateEditStatingDate.TabIndex = 21;
             // 
             // lookUpEditMission
             // 
@@ -506,6 +531,7 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.btnCreate);
             this.groupControl2.Controls.Add(this.btnSave);
             this.groupControl2.Controls.Add(this.btnGiveUp);
             this.groupControl2.Location = new System.Drawing.Point(3, 178);
@@ -517,16 +543,17 @@
             // 
             // btnSave
             // 
-            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(199, 5);
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.Location = new System.Drawing.Point(68, 5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(125, 40);
             this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Kaydet";
+            this.btnSave.Text = "Güncelle";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnGiveUp
             // 
-            this.btnGiveUp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnGiveUp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGiveUp.ImageOptions.Image")));
             this.btnGiveUp.Location = new System.Drawing.Point(330, 5);
             this.btnGiveUp.Name = "btnGiveUp";
             this.btnGiveUp.Size = new System.Drawing.Size(125, 40);
@@ -763,29 +790,15 @@
             this.radioButton1.Text = "Yetki 1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // dateEditStatingDate
+            // btnCreate
             // 
-            this.dateEditStatingDate.EditValue = null;
-            this.dateEditStatingDate.Location = new System.Drawing.Point(327, 69);
-            this.dateEditStatingDate.Name = "dateEditStatingDate";
-            this.dateEditStatingDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditStatingDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditStatingDate.Size = new System.Drawing.Size(122, 20);
-            this.dateEditStatingDate.TabIndex = 21;
-            // 
-            // dateEditQuittingDate
-            // 
-            this.dateEditQuittingDate.EditValue = null;
-            this.dateEditQuittingDate.Location = new System.Drawing.Point(327, 98);
-            this.dateEditQuittingDate.Name = "dateEditQuittingDate";
-            this.dateEditQuittingDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditQuittingDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditQuittingDate.Size = new System.Drawing.Size(122, 20);
-            this.dateEditQuittingDate.TabIndex = 22;
+            this.btnCreate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnCreate.Location = new System.Drawing.Point(199, 5);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(125, 40);
+            this.btnCreate.TabIndex = 2;
+            this.btnCreate.Text = "Kaydet";
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // FrmEmployeeCard
             // 
@@ -806,6 +819,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditQuittingDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditQuittingDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditStatingDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditStatingDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMission.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).EndInit();
@@ -855,10 +872,6 @@
             this.groupControl7.ResumeLayout(false);
             this.groupControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditStatingDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditStatingDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditQuittingDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditQuittingDate.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -924,5 +937,6 @@
         private DevExpress.XtraEditors.LookUpEdit lookUpEditMission;
         private DevExpress.XtraEditors.DateEdit dateEditQuittingDate;
         private DevExpress.XtraEditors.DateEdit dateEditStatingDate;
+        private DevExpress.XtraEditors.SimpleButton btnCreate;
     }
 }

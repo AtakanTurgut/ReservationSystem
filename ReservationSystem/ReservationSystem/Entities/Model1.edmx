@@ -50,24 +50,25 @@
           <Property Name="Phone" Type="char" MaxLength="4" />
           <Property Name="StatusId" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Employees">
           <Key>
             <PropertyRef Name="EmployeeId" />
           </Key>
-          <Property Name="EmployeeId" Type="int" Nullable="false" />
+          <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NameSurname" Type="nvarchar" MaxLength="100" />
-          <Property Name="IdentityNumber" Type="char" MaxLength="11" />
+          <Property Name="IdentityNumber" Type="nchar" MaxLength="11" />
           <Property Name="Address" Type="nvarchar" MaxLength="200" />
           <Property Name="Mail" Type="nvarchar" MaxLength="50" />
           <Property Name="Phone" Type="nvarchar" MaxLength="30" />
           <Property Name="StartingDate" Type="date" />
           <Property Name="QuittingDate" Type="date" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProfileFront" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProfileBack" Type="nvarchar" MaxLength="250" />
+          <Property Name="Authority" Type="char" MaxLength="1" />
           <Property Name="DepartmentId" Type="int" />
           <Property Name="MissionId" Type="int" />
           <Property Name="StatusId" Type="int" />
-          <Property Name="Description" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Missions">
           <Key>
@@ -389,6 +390,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Missions" EntityType="Self.Missions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Phones" EntityType="Self.Phones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductCategories" EntityType="Self.ProductCategories" Schema="dbo" store:Type="Tables" />
@@ -398,22 +400,6 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           <EntitySet Name="Statuses" EntityType="Self.Statuses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Units" EntityType="Self.Units" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Employees" EntityType="Self.Employees" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Employees].[EmployeeId] AS [EmployeeId], 
-    [Employees].[NameSurname] AS [NameSurname], 
-    [Employees].[IdentityNumber] AS [IdentityNumber], 
-    [Employees].[Address] AS [Address], 
-    [Employees].[Mail] AS [Mail], 
-    [Employees].[Phone] AS [Phone], 
-    [Employees].[StartingDate] AS [StartingDate], 
-    [Employees].[QuittingDate] AS [QuittingDate], 
-    [Employees].[DepartmentId] AS [DepartmentId], 
-    [Employees].[MissionId] AS [MissionId], 
-    [Employees].[StatusId] AS [StatusId], 
-    [Employees].[Description] AS [Description]
-    FROM [dbo].[Employees] AS [Employees]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_Cases_Statuses" Association="Self.FK_Cases_Statuses">
             <End Role="Statuses" EntitySet="Statuses" />
             <End Role="Cases" EntitySet="Cases" />
@@ -550,6 +536,29 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Departments" FromRole="Departments" ToRole="Employees" />
           <NavigationProperty Name="Missions" Relationship="Self.FK_Missions_Departments" FromRole="Departments" ToRole="Missions" />
         </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameSurname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IdentityNumber" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="StartingDate" Type="DateTime" Precision="0" />
+          <Property Name="QuittingDate" Type="DateTime" Precision="0" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProfileFront" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ProfileBack" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Authority" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DepartmentId" Type="Int32" />
+          <Property Name="MissionId" Type="Int32" />
+          <Property Name="StatusId" Type="Int32" />
+          <NavigationProperty Name="Departments" Relationship="Self.FK_Employees_Departments" FromRole="Employees" ToRole="Departments" />
+          <NavigationProperty Name="Missions" Relationship="Self.FK_Employees_Missions" FromRole="Employees" ToRole="Missions" />
+          <NavigationProperty Name="Statuses" Relationship="Self.FK_Employees_Statuses" FromRole="Employees" ToRole="Statuses" />
+        </EntityType>
         <EntityType Name="Missions">
           <Key>
             <PropertyRef Name="MissionId" />
@@ -634,13 +643,13 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           <NavigationProperty Name="Countries" Relationship="Self.FK_Countries_Statuses" FromRole="Statuses" ToRole="Countries" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_Statuses" FromRole="Statuses" ToRole="Customers" />
           <NavigationProperty Name="Departments" Relationship="Self.FK_Departments_Statuses" FromRole="Statuses" ToRole="Departments" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Statuses" FromRole="Statuses" ToRole="Employees" />
           <NavigationProperty Name="Missions" Relationship="Self.FK_Missions_Statuses" FromRole="Statuses" ToRole="Missions" />
           <NavigationProperty Name="Phones" Relationship="Self.FK_Phones_Statuses" FromRole="Statuses" ToRole="Phones" />
           <NavigationProperty Name="ProductCategories" Relationship="Self.FK_ProductCategories_Statuses" FromRole="Statuses" ToRole="ProductCategories" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Products_Statuses" FromRole="Statuses" ToRole="Products" />
           <NavigationProperty Name="Rates" Relationship="Self.FK_Rates_Statuses" FromRole="Statuses" ToRole="Rates" />
           <NavigationProperty Name="Rooms" Relationship="Self.FK_Rooms_Statuses" FromRole="Statuses" ToRole="Rooms" />
-          <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Statuses" FromRole="Statuses" ToRole="Employees" />
           <NavigationProperty Name="Units" Relationship="Self.FK_Units_Statuses" FromRole="Statuses" ToRole="Units" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -662,26 +671,6 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Products_Units" FromRole="Units" ToRole="Products" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Units_Statuses" FromRole="Units" ToRole="Statuses" />
-        </EntityType>
-        <EntityType Name="Employees">
-          <Key>
-            <PropertyRef Name="EmployeeId" />
-          </Key>
-          <Property Name="EmployeeId" Type="Int32" Nullable="false" />
-          <Property Name="NameSurname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="IdentityNumber" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
-          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="StartingDate" Type="DateTime" Precision="0" />
-          <Property Name="QuittingDate" Type="DateTime" Precision="0" />
-          <Property Name="DepartmentId" Type="Int32" />
-          <Property Name="MissionId" Type="Int32" />
-          <Property Name="StatusId" Type="Int32" />
-          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Departments" Relationship="Self.FK_Employees_Departments" FromRole="Employees" ToRole="Departments" />
-          <NavigationProperty Name="Missions" Relationship="Self.FK_Employees_Missions" FromRole="Employees" ToRole="Missions" />
-          <NavigationProperty Name="Statuses" Relationship="Self.FK_Employees_Statuses" FromRole="Employees" ToRole="Statuses" />
         </EntityType>
         <Association Name="FK_Cases_Statuses">
           <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
@@ -791,6 +780,18 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Employees_Statuses">
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Statuses">
+              <PropertyRef Name="StatusId" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="StatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Missions_Statuses">
           <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Missions" Type="Self.Missions" Multiplicity="*" />
@@ -887,18 +888,6 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Employees_Statuses">
-          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
-          <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Statuses">
-              <PropertyRef Name="StatusId" />
-            </Principal>
-            <Dependent Role="Employees">
-              <PropertyRef Name="StatusId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Units_Statuses">
           <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Units" Type="Self.Units" Multiplicity="*" />
@@ -916,6 +905,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           <EntitySet Name="Countries" EntityType="Self.Countries" />
           <EntitySet Name="Customers" EntityType="Self.Customers" />
           <EntitySet Name="Departments" EntityType="Self.Departments" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" />
           <EntitySet Name="Missions" EntityType="Self.Missions" />
           <EntitySet Name="Phones" EntityType="Self.Phones" />
           <EntitySet Name="ProductCategories" EntityType="Self.ProductCategories" />
@@ -925,7 +915,6 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           <EntitySet Name="Statuses" EntityType="Self.Statuses" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Units" EntityType="Self.Units" />
-          <EntitySet Name="Employees" EntityType="Self.Employees" />
           <AssociationSet Name="FK_Cases_Statuses" Association="Self.FK_Cases_Statuses">
             <End Role="Statuses" EntitySet="Statuses" />
             <End Role="Cases" EntitySet="Cases" />
@@ -962,6 +951,10 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
             <End Role="Missions" EntitySet="Missions" />
             <End Role="Employees" EntitySet="Employees" />
           </AssociationSet>
+          <AssociationSet Name="FK_Employees_Statuses" Association="Self.FK_Employees_Statuses">
+            <End Role="Statuses" EntitySet="Statuses" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
           <AssociationSet Name="FK_Missions_Statuses" Association="Self.FK_Missions_Statuses">
             <End Role="Statuses" EntitySet="Statuses" />
             <End Role="Missions" EntitySet="Missions" />
@@ -993,10 +986,6 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
           <AssociationSet Name="FK_Rooms_Statuses" Association="Self.FK_Rooms_Statuses">
             <End Role="Statuses" EntitySet="Statuses" />
             <End Role="Rooms" EntitySet="Rooms" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Employees_Statuses" Association="Self.FK_Employees_Statuses">
-            <End Role="Statuses" EntitySet="Statuses" />
-            <End Role="Employees" EntitySet="Employees" />
           </AssociationSet>
           <AssociationSet Name="FK_Units_Statuses" Association="Self.FK_Units_Statuses">
             <End Role="Statuses" EntitySet="Statuses" />
@@ -1054,6 +1043,27 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
                 <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
                 <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="HotelDbModel.Employees">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+                <ScalarProperty Name="IdentityNumber" ColumnName="IdentityNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="StartingDate" ColumnName="StartingDate" />
+                <ScalarProperty Name="QuittingDate" ColumnName="QuittingDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ProfileFront" ColumnName="ProfileFront" />
+                <ScalarProperty Name="ProfileBack" ColumnName="ProfileBack" />
+                <ScalarProperty Name="Authority" ColumnName="Authority" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="MissionId" ColumnName="MissionId" />
                 <ScalarProperty Name="StatusId" ColumnName="StatusId" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1151,24 +1161,6 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
                 <ScalarProperty Name="UnitId" ColumnName="UnitId" />
                 <ScalarProperty Name="UnitName" ColumnName="UnitName" />
                 <ScalarProperty Name="StatusId" ColumnName="StatusId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Employees">
-            <EntityTypeMapping TypeName="HotelDbModel.Employees">
-              <MappingFragment StoreEntitySet="Employees">
-                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
-                <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
-                <ScalarProperty Name="IdentityNumber" ColumnName="IdentityNumber" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Mail" ColumnName="Mail" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="StartingDate" ColumnName="StartingDate" />
-                <ScalarProperty Name="QuittingDate" ColumnName="QuittingDate" />
-                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
-                <ScalarProperty Name="MissionId" ColumnName="MissionId" />
-                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

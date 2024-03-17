@@ -90,3 +90,4 @@ C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Definitions.FrmProductCategory.resources
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\Reservat.FBC7E21A.Up2Date
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Employee.FrmEmployeeCard.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Employee.FrmEmployeeList.resources

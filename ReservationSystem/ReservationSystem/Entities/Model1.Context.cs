@@ -29,6 +29,7 @@ namespace ReservationSystem.Entities
         public virtual DbSet<Countries> Countries { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
         public virtual DbSet<Departments> Departments { get; set; }
+        public virtual DbSet<Employees> Employees { get; set; }
         public virtual DbSet<Missions> Missions { get; set; }
         public virtual DbSet<Phones> Phones { get; set; }
         public virtual DbSet<ProductCategories> ProductCategories { get; set; }
@@ -38,6 +39,5 @@ namespace ReservationSystem.Entities
         public virtual DbSet<Statuses> Statuses { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Units> Units { get; set; }
-        public virtual DbSet<Employees> Employees { get; set; }
     }
 }

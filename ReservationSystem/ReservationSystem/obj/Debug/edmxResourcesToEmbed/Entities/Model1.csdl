@@ -54,6 +54,29 @@
     <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Departments" FromRole="Departments" ToRole="Employees" />
     <NavigationProperty Name="Missions" Relationship="Self.FK_Missions_Departments" FromRole="Departments" ToRole="Missions" />
   </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSurname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IdentityNumber" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="StartingDate" Type="DateTime" Precision="0" />
+    <Property Name="QuittingDate" Type="DateTime" Precision="0" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProfileFront" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ProfileBack" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Authority" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="DepartmentId" Type="Int32" />
+    <Property Name="MissionId" Type="Int32" />
+    <Property Name="StatusId" Type="Int32" />
+    <NavigationProperty Name="Departments" Relationship="Self.FK_Employees_Departments" FromRole="Employees" ToRole="Departments" />
+    <NavigationProperty Name="Missions" Relationship="Self.FK_Employees_Missions" FromRole="Employees" ToRole="Missions" />
+    <NavigationProperty Name="Statuses" Relationship="Self.FK_Employees_Statuses" FromRole="Employees" ToRole="Statuses" />
+  </EntityType>
   <EntityType Name="Missions">
     <Key>
       <PropertyRef Name="MissionId" />
@@ -138,13 +161,13 @@
     <NavigationProperty Name="Countries" Relationship="Self.FK_Countries_Statuses" FromRole="Statuses" ToRole="Countries" />
     <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_Statuses" FromRole="Statuses" ToRole="Customers" />
     <NavigationProperty Name="Departments" Relationship="Self.FK_Departments_Statuses" FromRole="Statuses" ToRole="Departments" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Statuses" FromRole="Statuses" ToRole="Employees" />
     <NavigationProperty Name="Missions" Relationship="Self.FK_Missions_Statuses" FromRole="Statuses" ToRole="Missions" />
     <NavigationProperty Name="Phones" Relationship="Self.FK_Phones_Statuses" FromRole="Statuses" ToRole="Phones" />
     <NavigationProperty Name="ProductCategories" Relationship="Self.FK_ProductCategories_Statuses" FromRole="Statuses" ToRole="ProductCategories" />
     <NavigationProperty Name="Products" Relationship="Self.FK_Products_Statuses" FromRole="Statuses" ToRole="Products" />
     <NavigationProperty Name="Rates" Relationship="Self.FK_Rates_Statuses" FromRole="Statuses" ToRole="Rates" />
     <NavigationProperty Name="Rooms" Relationship="Self.FK_Rooms_Statuses" FromRole="Statuses" ToRole="Rooms" />
-    <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Statuses" FromRole="Statuses" ToRole="Employees" />
     <NavigationProperty Name="Units" Relationship="Self.FK_Units_Statuses" FromRole="Statuses" ToRole="Units" />
   </EntityType>
   <EntityType Name="sysdiagrams">
@@ -166,26 +189,6 @@
     <Property Name="StatusId" Type="Int32" />
     <NavigationProperty Name="Products" Relationship="Self.FK_Products_Units" FromRole="Units" ToRole="Products" />
     <NavigationProperty Name="Statuses" Relationship="Self.FK_Units_Statuses" FromRole="Units" ToRole="Statuses" />
-  </EntityType>
-  <EntityType Name="Employees">
-    <Key>
-      <PropertyRef Name="EmployeeId" />
-    </Key>
-    <Property Name="EmployeeId" Type="Int32" Nullable="false" />
-    <Property Name="NameSurname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="IdentityNumber" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
-    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="StartingDate" Type="DateTime" Precision="0" />
-    <Property Name="QuittingDate" Type="DateTime" Precision="0" />
-    <Property Name="DepartmentId" Type="Int32" />
-    <Property Name="MissionId" Type="Int32" />
-    <Property Name="StatusId" Type="Int32" />
-    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Departments" Relationship="Self.FK_Employees_Departments" FromRole="Employees" ToRole="Departments" />
-    <NavigationProperty Name="Missions" Relationship="Self.FK_Employees_Missions" FromRole="Employees" ToRole="Missions" />
-    <NavigationProperty Name="Statuses" Relationship="Self.FK_Employees_Statuses" FromRole="Employees" ToRole="Statuses" />
   </EntityType>
   <Association Name="FK_Cases_Statuses">
     <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
@@ -295,6 +298,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Employees_Statuses">
+    <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Statuses">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Missions_Statuses">
     <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
     <End Role="Missions" Type="Self.Missions" Multiplicity="*" />
@@ -391,18 +406,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Employees_Statuses">
-    <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
-    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Statuses">
-        <PropertyRef Name="StatusId" />
-      </Principal>
-      <Dependent Role="Employees">
-        <PropertyRef Name="StatusId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Units_Statuses">
     <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
     <End Role="Units" Type="Self.Units" Multiplicity="*" />
@@ -420,6 +423,7 @@
     <EntitySet Name="Countries" EntityType="Self.Countries" />
     <EntitySet Name="Customers" EntityType="Self.Customers" />
     <EntitySet Name="Departments" EntityType="Self.Departments" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" />
     <EntitySet Name="Missions" EntityType="Self.Missions" />
     <EntitySet Name="Phones" EntityType="Self.Phones" />
     <EntitySet Name="ProductCategories" EntityType="Self.ProductCategories" />
@@ -429,7 +433,6 @@
     <EntitySet Name="Statuses" EntityType="Self.Statuses" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Units" EntityType="Self.Units" />
-    <EntitySet Name="Employees" EntityType="Self.Employees" />
     <AssociationSet Name="FK_Cases_Statuses" Association="Self.FK_Cases_Statuses">
       <End Role="Statuses" EntitySet="Statuses" />
       <End Role="Cases" EntitySet="Cases" />
@@ -466,6 +469,10 @@
       <End Role="Missions" EntitySet="Missions" />
       <End Role="Employees" EntitySet="Employees" />
     </AssociationSet>
+    <AssociationSet Name="FK_Employees_Statuses" Association="Self.FK_Employees_Statuses">
+      <End Role="Statuses" EntitySet="Statuses" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
     <AssociationSet Name="FK_Missions_Statuses" Association="Self.FK_Missions_Statuses">
       <End Role="Statuses" EntitySet="Statuses" />
       <End Role="Missions" EntitySet="Missions" />
@@ -497,10 +504,6 @@
     <AssociationSet Name="FK_Rooms_Statuses" Association="Self.FK_Rooms_Statuses">
       <End Role="Statuses" EntitySet="Statuses" />
       <End Role="Rooms" EntitySet="Rooms" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Employees_Statuses" Association="Self.FK_Employees_Statuses">
-      <End Role="Statuses" EntitySet="Statuses" />
-      <End Role="Employees" EntitySet="Employees" />
     </AssociationSet>
     <AssociationSet Name="FK_Units_Statuses" Association="Self.FK_Units_Statuses">
       <End Role="Statuses" EntitySet="Statuses" />

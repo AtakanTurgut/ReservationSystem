@@ -82,5 +82,12 @@ namespace ReservationSystem
             Forms.Employee.FrmEmployeeCard FrmEmployeeCard = new Forms.Employee.FrmEmployeeCard();
             FrmEmployeeCard.Show();
         }
+
+        private void btnEmployeeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Employee.FrmEmployeeList FrmEmployeeList = new Forms.Employee.FrmEmployeeList();
+            FrmEmployeeList.MdiParent = this;
+            FrmEmployeeList.Show();
+        }
     }
 }

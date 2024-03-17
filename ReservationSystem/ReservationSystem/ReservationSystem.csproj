@@ -194,8 +194,15 @@
     <Compile Include="Forms\Employee\FrmEmployeeCard.Designer.cs">
       <DependentUpon>FrmEmployeeCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Employee\FrmEmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\FrmEmployeeList.Designer.cs">
+      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Repository.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +239,9 @@
     <EmbeddedResource Include="Forms\Employee\FrmEmployeeCard.resx">
       <DependentUpon>FrmEmployeeCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\FrmEmployeeList.resx">
+      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -266,6 +276,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Entities\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

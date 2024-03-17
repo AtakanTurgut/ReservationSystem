@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnCustomerList = new DevExpress.XtraBars.BarButtonItem();
@@ -55,7 +56,9 @@
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -191,6 +194,7 @@
             this.btnEmployeeList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployeeList.ImageOptions.Image")));
             this.btnEmployeeList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEmployeeList.ImageOptions.LargeImage")));
             this.btnEmployeeList.Name = "btnEmployeeList";
+            this.btnEmployeeList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEmployeeList_ItemClick);
             // 
             // btnNewEmployee
             // 
@@ -282,18 +286,24 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.btnProductCategoryDefinitions);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 481);
             this.Controls.Add(this.ribbonControl1);
+            this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Otel Rezervasyon Sistemi";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,6 +337,7 @@
         private DevExpress.XtraBars.BarButtonItem btnProductCategoryDefinitions;
         private DevExpress.XtraBars.BarButtonItem btnEmployeeList;
         private DevExpress.XtraBars.BarButtonItem btnNewEmployee;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }
 

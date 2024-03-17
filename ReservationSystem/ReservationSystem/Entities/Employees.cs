@@ -22,10 +22,13 @@ namespace ReservationSystem.Entities
         public string Phone { get; set; }
         public Nullable<System.DateTime> StartingDate { get; set; }
         public Nullable<System.DateTime> QuittingDate { get; set; }
+        public string Description { get; set; }
+        public string ProfileFront { get; set; }
+        public string ProfileBack { get; set; }
+        public string Authority { get; set; }
         public Nullable<int> DepartmentId { get; set; }
         public Nullable<int> MissionId { get; set; }
         public Nullable<int> StatusId { get; set; }
-        public string Description { get; set; }
     
         public virtual Departments Departments { get; set; }
         public virtual Missions Missions { get; set; }

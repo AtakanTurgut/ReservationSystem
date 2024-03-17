@@ -45,24 +45,25 @@
     <Property Name="Phone" Type="char" MaxLength="4" />
     <Property Name="StatusId" Type="int" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Employees">
     <Key>
       <PropertyRef Name="EmployeeId" />
     </Key>
-    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NameSurname" Type="nvarchar" MaxLength="100" />
-    <Property Name="IdentityNumber" Type="char" MaxLength="11" />
+    <Property Name="IdentityNumber" Type="nchar" MaxLength="11" />
     <Property Name="Address" Type="nvarchar" MaxLength="200" />
     <Property Name="Mail" Type="nvarchar" MaxLength="50" />
     <Property Name="Phone" Type="nvarchar" MaxLength="30" />
     <Property Name="StartingDate" Type="date" />
     <Property Name="QuittingDate" Type="date" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProfileFront" Type="nvarchar" MaxLength="250" />
+    <Property Name="ProfileBack" Type="nvarchar" MaxLength="250" />
+    <Property Name="Authority" Type="char" MaxLength="1" />
     <Property Name="DepartmentId" Type="int" />
     <Property Name="MissionId" Type="int" />
     <Property Name="StatusId" Type="int" />
-    <Property Name="Description" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Missions">
     <Key>
@@ -384,6 +385,7 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
     <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Missions" EntityType="Self.Missions" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Phones" EntityType="Self.Phones" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductCategories" EntityType="Self.ProductCategories" Schema="dbo" store:Type="Tables" />
@@ -393,22 +395,6 @@ warning 6002: The table/view 'HotelDb.dbo.Employees' does not have a primary key
     <EntitySet Name="Statuses" EntityType="Self.Statuses" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Units" EntityType="Self.Units" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Employees" EntityType="Self.Employees" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Employees].[EmployeeId] AS [EmployeeId], 
-    [Employees].[NameSurname] AS [NameSurname], 
-    [Employees].[IdentityNumber] AS [IdentityNumber], 
-    [Employees].[Address] AS [Address], 
-    [Employees].[Mail] AS [Mail], 
-    [Employees].[Phone] AS [Phone], 
-    [Employees].[StartingDate] AS [StartingDate], 
-    [Employees].[QuittingDate] AS [QuittingDate], 
-    [Employees].[DepartmentId] AS [DepartmentId], 
-    [Employees].[MissionId] AS [MissionId], 
-    [Employees].[StatusId] AS [StatusId], 
-    [Employees].[Description] AS [Description]
-    FROM [dbo].[Employees] AS [Employees]</DefiningQuery>
-    </EntitySet>
     <AssociationSet Name="FK_Cases_Statuses" Association="Self.FK_Cases_Statuses">
       <End Role="Statuses" EntitySet="Statuses" />
       <End Role="Cases" EntitySet="Cases" />
