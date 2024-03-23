@@ -39,5 +39,7 @@ namespace ReservationSystem.Entities
         public virtual DbSet<Statuses> Statuses { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Units> Units { get; set; }
+        public virtual DbSet<Cities> Cities { get; set; }
+        public virtual DbSet<Towns> Towns { get; set; }
     }
 }

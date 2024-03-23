@@ -89,5 +89,11 @@ namespace ReservationSystem
             FrmEmployeeList.MdiParent = this;
             FrmEmployeeList.Show();
         }
+
+        private void btnNewCustomer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Customer.FrmCustomerCard FrmCustomerCard = new Forms.Customer.FrmCustomerCard();
+            FrmCustomerCard.Show();
+        }
     }
 }

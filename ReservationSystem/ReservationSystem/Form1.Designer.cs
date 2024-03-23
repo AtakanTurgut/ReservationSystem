@@ -44,6 +44,7 @@
             this.btnProductCategoryDefinitions = new DevExpress.XtraBars.BarButtonItem();
             this.btnEmployeeList = new DevExpress.XtraBars.BarButtonItem();
             this.btnNewEmployee = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNewCustomer = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -78,9 +79,10 @@
             this.btnCountryDefinitions,
             this.btnProductCategoryDefinitions,
             this.btnEmployeeList,
-            this.btnNewEmployee});
+            this.btnNewEmployee,
+            this.btnNewCustomer});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 15;
+            this.ribbonControl1.MaxItemId = 16;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -95,6 +97,8 @@
             // 
             this.btnCustomerList.Caption = "Müşteri Listesi";
             this.btnCustomerList.Id = 2;
+            this.btnCustomerList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomerList.ImageOptions.Image")));
+            this.btnCustomerList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCustomerList.ImageOptions.LargeImage")));
             this.btnCustomerList.Name = "btnCustomerList";
             // 
             // btnStatusDefinitions
@@ -205,6 +209,15 @@
             this.btnNewEmployee.Name = "btnNewEmployee";
             this.btnNewEmployee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewEmployee_ItemClick);
             // 
+            // btnNewCustomer
+            // 
+            this.btnNewCustomer.Caption = "Yeni Müşteri Kartı";
+            this.btnNewCustomer.Id = 15;
+            this.btnNewCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNewCustomer.ImageOptions.Image")));
+            this.btnNewCustomer.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNewCustomer.ImageOptions.LargeImage")));
+            this.btnNewCustomer.Name = "btnNewCustomer";
+            this.btnNewCustomer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewCustomer_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -226,6 +239,7 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnCustomerList);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnNewCustomer);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbonPage3
@@ -338,6 +352,7 @@
         private DevExpress.XtraBars.BarButtonItem btnEmployeeList;
         private DevExpress.XtraBars.BarButtonItem btnNewEmployee;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem btnNewCustomer;
     }
 }
 

@@ -509,5 +509,22 @@
       <End Role="Statuses" EntitySet="Statuses" />
       <End Role="Units" EntitySet="Units" />
     </AssociationSet>
+    <EntitySet Name="Cities" EntityType="HotelDbModel.Cities" />
+    <EntitySet Name="Towns" EntityType="HotelDbModel.Towns" />
   </EntityContainer>
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Towns">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Town" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
 </Schema>
