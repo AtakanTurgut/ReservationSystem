@@ -27,7 +27,7 @@ namespace ReservationSystem.Forms.Customer
 
         private void FrmCustomerCard_Load(object sender, EventArgs e)
         {
-            this.Text = id.ToString();
+            this.Text = id.ToString();  
 
             if (id != 0)
             {
