@@ -32,7 +32,7 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnGiveUp = new DevExpress.XtraEditors.SimpleButton();
+            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
@@ -134,7 +134,7 @@
             // 
             this.groupControl2.Controls.Add(this.btnCreate);
             this.groupControl2.Controls.Add(this.btnSave);
-            this.groupControl2.Controls.Add(this.btnGiveUp);
+            this.groupControl2.Controls.Add(this.btnClose);
             this.groupControl2.Location = new System.Drawing.Point(3, 178);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.ShowCaption = false;
@@ -150,6 +150,7 @@
             this.btnCreate.Size = new System.Drawing.Size(125, 40);
             this.btnCreate.TabIndex = 2;
             this.btnCreate.Text = "Kaydet";
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnSave
             // 
@@ -159,15 +160,17 @@
             this.btnSave.Size = new System.Drawing.Size(125, 40);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Güncelle";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnGiveUp
+            // btnClose
             // 
-            this.btnGiveUp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGiveUp.ImageOptions.Image")));
-            this.btnGiveUp.Location = new System.Drawing.Point(330, 5);
-            this.btnGiveUp.Name = "btnGiveUp";
-            this.btnGiveUp.Size = new System.Drawing.Size(125, 40);
-            this.btnGiveUp.TabIndex = 0;
-            this.btnGiveUp.Text = "Vazgeç";
+            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnClose.Location = new System.Drawing.Point(330, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(125, 40);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "Vazgeç";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // xtraTabPage2
             // 
@@ -248,6 +251,7 @@
             this.pictureEditProfile2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEditProfile2.Size = new System.Drawing.Size(121, 106);
             this.pictureEditProfile2.TabIndex = 1;
+            this.pictureEditProfile2.EditValueChanged += new System.EventHandler(this.pictureEditProfile2_EditValueChanged);
             // 
             // pictureEditProfile1
             // 
@@ -257,6 +261,7 @@
             this.pictureEditProfile1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEditProfile1.Size = new System.Drawing.Size(121, 106);
             this.pictureEditProfile1.TabIndex = 0;
+            this.pictureEditProfile1.EditValueChanged += new System.EventHandler(this.pictureEditProfile1_EditValueChanged);
             // 
             // lblFilePathFront
             // 
@@ -782,7 +787,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton btnCreate;
         private DevExpress.XtraEditors.SimpleButton btnSave;
-        private DevExpress.XtraEditors.SimpleButton btnGiveUp;
+        private DevExpress.XtraEditors.SimpleButton btnClose;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraEditors.GroupControl groupControl5;
         private DevExpress.XtraEditors.MemoEdit txtDescription;

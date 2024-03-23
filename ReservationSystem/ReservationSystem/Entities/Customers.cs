@@ -26,9 +26,13 @@ namespace ReservationSystem.Entities
         public Nullable<int> CountryId { get; set; }
         public Nullable<int> RoomId { get; set; }
         public Nullable<int> StatusId { get; set; }
+        public Nullable<int> CityId { get; set; }
+        public Nullable<int> TownId { get; set; }
     
         public virtual Countries Countries { get; set; }
         public virtual Rooms Rooms { get; set; }
         public virtual Statuses Statuses { get; set; }
+        public virtual Cities Cities { get; set; }
+        public virtual Towns Towns { get; set; }
     }
 }

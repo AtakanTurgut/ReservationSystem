@@ -134,7 +134,7 @@ namespace ReservationSystem.Forms.Employee
 
             repository.TUpdate(value);
 
-            XtraMessageBox.Show("Personel kartı bilgileri başarıyla güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            XtraMessageBox.Show("Personel kartı bilgileri başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void pictureEditProfile1_EditValueChanged(object sender, EventArgs e)

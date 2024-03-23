@@ -14,7 +14,19 @@ namespace ReservationSystem.Entities
     
     public partial class Cities
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Cities()
+        {
+            this.Customers = new HashSet<Customers>();
+            this.Towns = new HashSet<Towns>();
+        }
+    
         public int id { get; set; }
         public string City { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Customers> Customers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Towns> Towns { get; set; }
     }
 }

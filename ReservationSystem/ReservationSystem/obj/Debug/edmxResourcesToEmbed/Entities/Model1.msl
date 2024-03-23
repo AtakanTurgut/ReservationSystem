@@ -25,6 +25,8 @@
     <EntitySetMapping Name="Customers">
       <EntityTypeMapping TypeName="HotelDbModel.Customers">
         <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="TownId" ColumnName="TownId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
           <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
           <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
           <ScalarProperty Name="IdentityNumber" ColumnName="IdentityNumber" />

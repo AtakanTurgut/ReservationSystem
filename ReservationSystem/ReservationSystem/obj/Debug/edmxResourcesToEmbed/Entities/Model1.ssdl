@@ -34,13 +34,15 @@
     <Property Name="NameSurname" Type="nvarchar" MaxLength="100" />
     <Property Name="IdentityNumber" Type="char" MaxLength="11" />
     <Property Name="Mail" Type="nvarchar" MaxLength="50" />
-    <Property Name="Phone" Type="nvarchar" MaxLength="30" />
-    <Property Name="Address" Type="nvarchar" MaxLength="200" />
-    <Property Name="Description" Type="nvarchar" MaxLength="50" />
-    <Property Name="Photograph1" Type="nvarchar" MaxLength="50" />
-    <Property Name="Photograph2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Photograph1" Type="nvarchar" MaxLength="250" />
+    <Property Name="Photograph2" Type="nvarchar" MaxLength="250" />
     <Property Name="CountryId" Type="int" />
     <Property Name="RoomId" Type="int" />
+    <Property Name="CityId" Type="int" />
+    <Property Name="TownId" Type="int" />
     <Property Name="StatusId" Type="int" />
   </EntityType>
   <EntityType Name="Departments">
@@ -191,6 +193,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Customers_Cities">
+    <End Role="Cities" Type="Self.Cities" Multiplicity="0..1" />
+    <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Customers_Countries">
     <End Role="Countries" Type="Self.Countries" Multiplicity="0..1" />
     <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
@@ -224,6 +238,18 @@
       </Principal>
       <Dependent Role="Customers">
         <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customers_Towns">
+    <End Role="Towns" Type="Self.Towns" Multiplicity="0..1" />
+    <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Towns">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="TownId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -383,6 +409,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Towns_Cities">
+    <End Role="Cities" Type="Self.Cities" Multiplicity="1" />
+    <End Role="Towns" Type="Self.Towns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Towns">
+        <PropertyRef Name="City" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Units_Statuses">
     <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
     <End Role="Units" Type="Self.Units" Multiplicity="*" />
@@ -420,6 +458,10 @@
       <End Role="Statuses" EntitySet="Statuses" />
       <End Role="Countries" EntitySet="Countries" />
     </AssociationSet>
+    <AssociationSet Name="FK_Customers_Cities" Association="Self.FK_Customers_Cities">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
     <AssociationSet Name="FK_Customers_Countries" Association="Self.FK_Customers_Countries">
       <End Role="Countries" EntitySet="Countries" />
       <End Role="Customers" EntitySet="Customers" />
@@ -430,6 +472,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_Customers_Statuses" Association="Self.FK_Customers_Statuses">
       <End Role="Statuses" EntitySet="Statuses" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customers_Towns" Association="Self.FK_Customers_Towns">
+      <End Role="Towns" EntitySet="Towns" />
       <End Role="Customers" EntitySet="Customers" />
     </AssociationSet>
     <AssociationSet Name="FK_Departments_Statuses" Association="Self.FK_Departments_Statuses">
@@ -483,6 +529,10 @@
     <AssociationSet Name="FK_Rooms_Statuses" Association="Self.FK_Rooms_Statuses">
       <End Role="Statuses" EntitySet="Statuses" />
       <End Role="Rooms" EntitySet="Rooms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Towns_Cities" Association="Self.FK_Towns_Cities">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="Towns" EntitySet="Towns" />
     </AssociationSet>
     <AssociationSet Name="FK_Units_Statuses" Association="Self.FK_Units_Statuses">
       <End Role="Statuses" EntitySet="Statuses" />

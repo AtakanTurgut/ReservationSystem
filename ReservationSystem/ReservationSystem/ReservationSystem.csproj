@@ -140,6 +140,12 @@
     <Compile Include="Forms\Customer\FrmCustomerCard.Designer.cs">
       <DependentUpon>FrmCustomerCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Customer\FrmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FrmCustomerList.Designer.cs">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Definitions\FrmCase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Customer\FrmCustomerCard.resx">
       <DependentUpon>FrmCustomerCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FrmCustomerList.resx">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Definitions\FrmCase.resx">
       <DependentUpon>FrmCase.cs</DependentUpon>

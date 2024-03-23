@@ -40,6 +40,9 @@
         <AssociationConnector Association="HotelDbModel.FK_Units_Statuses" ManuallyRouted="false" />
         <EntityTypeShape EntityType="HotelDbModel.Cities" Width="1.5" PointX="3.75" PointY="0.75" />
         <EntityTypeShape EntityType="HotelDbModel.Towns" Width="1.5" PointX="0.75" PointY="3.75" />
+        <AssociationConnector Association="HotelDbModel.FK_Customers_Cities" />
+        <AssociationConnector Association="HotelDbModel.FK_Customers_Towns" />
+        <AssociationConnector Association="HotelDbModel.FK_Towns_Cities" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

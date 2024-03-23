@@ -95,5 +95,12 @@ namespace ReservationSystem
             Forms.Customer.FrmCustomerCard FrmCustomerCard = new Forms.Customer.FrmCustomerCard();
             FrmCustomerCard.Show();
         }
+
+        private void btnCustomerList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Customer.FrmCustomerList FrmCustomerList = new Forms.Customer.FrmCustomerList();
+            FrmCustomerList.MdiParent = this;
+            FrmCustomerList.Show();
+        }
     }
 }
