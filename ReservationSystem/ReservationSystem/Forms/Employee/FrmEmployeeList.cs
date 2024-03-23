@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,10 @@ namespace ReservationSystem.Forms.Employee
 
         private void FrmEmployeeList_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = (from x in db.Employees select new
+            db.Employees.Load(); /**/
+
+            //gridControl1.DataSource = (from x in db.Employees select new
+            bindingSource.DataSource = (from x in db.Employees.Local select new
             {
                 x.EmployeeId,
                 x.NameSurname,
@@ -40,6 +44,18 @@ namespace ReservationSystem.Forms.Employee
             FrmEmployeeCard FrmEmployeeCard = new FrmEmployeeCard();
             FrmEmployeeCard.id = int.Parse(gridView1.GetFocusedRowCellValue("EmployeeId").ToString());
             FrmEmployeeCard.Show();
+        }
+
+        private void personeliSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bindingSource.RemoveCurrent();
+            db.SaveChanges();
+        }
+
+        private void personeliSilToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            bindingSource.RemoveCurrent();
+            db.SaveChanges();
         }
     }
 }

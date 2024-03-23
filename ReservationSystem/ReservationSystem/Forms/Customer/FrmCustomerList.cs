@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,10 @@ namespace ReservationSystem.Forms.Customer
 
         private void FrmCustomerList_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = (from x in db.Customers select new
+            db.Customers.Load(); /**/
+
+            //gridControl1.DataSource = (from x in db.Customers select new
+            bindingSource.DataSource = (from x in db.Customers.Local select new
             {
                 x.CustomerId,
                 x.NameSurname,
@@ -36,6 +40,7 @@ namespace ReservationSystem.Forms.Customer
                 x.Statuses.StatusName,
                 x.Description
             }).ToList();
+
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
@@ -43,6 +48,12 @@ namespace ReservationSystem.Forms.Customer
             FrmCustomerCard FrmCustomerCard = new FrmCustomerCard();
             FrmCustomerCard.id = int.Parse(gridView1.GetFocusedRowCellValue("CustomerId").ToString());
             FrmCustomerCard.Show();
+        }
+
+        private void musteriyiSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bindingSource.RemoveCurrent();
+            db.SaveChanges();
         }
     }
 }
