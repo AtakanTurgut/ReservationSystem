@@ -1,12 +1,86 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|c:\\users\\excalibur\\desktop\\reservationsystem\\reservationsystem\\reservationsystem\\forms\\product\\frmproductinputmovements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|solutionrelative:reservationsystem\\forms\\product\\frmproductinputmovements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|c:\\users\\excalibur\\desktop\\reservationsystem\\reservationsystem\\reservationsystem\\forms\\product\\frmproductoutputmovements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|solutionrelative:reservationsystem\\forms\\product\\frmproductoutputmovements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|c:\\users\\excalibur\\desktop\\reservationsystem\\reservationsystem\\reservationsystem\\forms\\product\\frmproductoutputmovements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|solutionrelative:reservationsystem\\forms\\product\\frmproductoutputmovements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|c:\\users\\excalibur\\desktop\\reservationsystem\\reservationsystem\\reservationsystem\\forms\\product\\frmproductinputmovements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|solutionrelative:reservationsystem\\forms\\product\\frmproductinputmovements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmProductOutputMovements.cs",
+              "DocumentMoniker": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductOutputMovements.cs",
+              "RelativeDocumentMoniker": "ReservationSystem\\Forms\\Product\\FrmProductOutputMovements.cs",
+              "ToolTip": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductOutputMovements.cs",
+              "RelativeToolTip": "ReservationSystem\\Forms\\Product\\FrmProductOutputMovements.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAgwBkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T15:27:28.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmProductOutputMovements.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductOutputMovements.cs",
+              "RelativeDocumentMoniker": "ReservationSystem\\Forms\\Product\\FrmProductOutputMovements.cs",
+              "ToolTip": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductOutputMovements.cs [Design]",
+              "RelativeToolTip": "ReservationSystem\\Forms\\Product\\FrmProductOutputMovements.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T15:27:26.794Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmProductInputMovements.cs",
+              "DocumentMoniker": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductInputMovements.cs",
+              "RelativeDocumentMoniker": "ReservationSystem\\Forms\\Product\\FrmProductInputMovements.cs",
+              "ToolTip": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductInputMovements.cs",
+              "RelativeToolTip": "ReservationSystem\\Forms\\Product\\FrmProductInputMovements.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAqwBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T15:27:07.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmProductInputMovements.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductInputMovements.cs",
+              "RelativeDocumentMoniker": "ReservationSystem\\Forms\\Product\\FrmProductInputMovements.cs",
+              "ToolTip": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductInputMovements.cs [Design]",
+              "RelativeToolTip": "ReservationSystem\\Forms\\Product\\FrmProductInputMovements.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T15:27:06.126Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

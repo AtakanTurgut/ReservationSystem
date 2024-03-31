@@ -33,7 +33,7 @@
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.personeliSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunGirisiSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vazgeçToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
@@ -63,21 +63,22 @@
             // contextMenuStrip
             // 
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.personeliSilToolStripMenuItem,
+            this.urunGirisiSilToolStripMenuItem,
             this.vazgeçToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(138, 48);
+            this.contextMenuStrip.Size = new System.Drawing.Size(199, 48);
             // 
-            // personeliSilToolStripMenuItem
+            // urunGirisiSilToolStripMenuItem
             // 
-            this.personeliSilToolStripMenuItem.Name = "personeliSilToolStripMenuItem";
-            this.personeliSilToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.personeliSilToolStripMenuItem.Text = "Personeli Sil";
+            this.urunGirisiSilToolStripMenuItem.Name = "urunGirisiSilToolStripMenuItem";
+            this.urunGirisiSilToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.urunGirisiSilToolStripMenuItem.Text = "Ürün Giriş Hareketini Sil";
+            this.urunGirisiSilToolStripMenuItem.Click += new System.EventHandler(this.urunGirisiSilToolStripMenuItem_Click);
             // 
             // vazgeçToolStripMenuItem
             // 
             this.vazgeçToolStripMenuItem.Name = "vazgeçToolStripMenuItem";
-            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.vazgeçToolStripMenuItem.Text = "Vazgeç";
             // 
             // FrmProductInputMovements
@@ -85,6 +86,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 301);
+            this.ContextMenuStrip = this.contextMenuStrip;
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmProductInputMovements";
             this.Text = "Ürün Giriş Hareketleri";
@@ -103,7 +105,7 @@
         private System.Windows.Forms.BindingSource bindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem personeliSilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem urunGirisiSilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vazgeçToolStripMenuItem;
     }
 }

@@ -23,7 +23,10 @@ namespace ReservationSystem.Forms.Product
 
         private void FrmProductInputMovements_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = (from x in db.ProductMovements select new
+            db.ProductMovements.Load(); /**/
+
+            //gridControl1.DataSource = (from x in db.ProductMovements select new
+            bindingSource.DataSource = (from x in db.ProductMovements.Local select new
             {
                 x.MovementId,
                 x.Products.ProductName,
@@ -38,6 +41,12 @@ namespace ReservationSystem.Forms.Product
             FrmProductMovement FrmProductMovement = new FrmProductMovement();
             FrmProductMovement.id = int.Parse(gridView1.GetFocusedRowCellValue("MovementId").ToString());
             FrmProductMovement.Show();
+        }
+
+        private void urunGirisiSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bindingSource.RemoveCurrent();
+            db.SaveChanges();
         }
     }
 }

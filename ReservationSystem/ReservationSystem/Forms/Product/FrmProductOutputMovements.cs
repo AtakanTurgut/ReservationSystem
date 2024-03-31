@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,10 @@ namespace ReservationSystem.Forms.Product
 
         private void FrmProductOutputMovements_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = (from x in db.ProductMovements select new
+            db.ProductMovements.Load(); /**/
+
+            //gridControl1.DataSource = (from x in db.ProductMovements select new
+            bindingSource.DataSource = (from x in db.ProductMovements.Local select new
             {
                 x.MovementId,
                 x.Products.ProductName,
@@ -37,6 +41,12 @@ namespace ReservationSystem.Forms.Product
             FrmProductMovement FrmProductMovement = new FrmProductMovement();
             FrmProductMovement.id = int.Parse(gridView1.GetFocusedRowCellValue("MovementId").ToString());
             FrmProductMovement.Show();
+        }
+
+        private void urunCıkısıSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bindingSource.RemoveCurrent();
+            db.SaveChanges();
         }
     }
 }
