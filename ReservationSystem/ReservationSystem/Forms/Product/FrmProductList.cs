@@ -32,8 +32,9 @@ namespace ReservationSystem.Forms.Product
                 x.ProductId,
                 x.ProductCategories.ProductCategory,
                 x.ProductName,
-                x.Price,
-                x.Units.UnitName
+                x.Total,
+                x.Units.UnitName,
+                x.Price
             }).ToList();
         }
 
