@@ -105,6 +105,7 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="HotelDbModel.Products">
         <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
           <ScalarProperty Name="ProductId" ColumnName="ProductId" />
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />
           <ScalarProperty Name="Price" ColumnName="Price" />
@@ -183,6 +184,18 @@
           <ScalarProperty Name="City" ColumnName="City" />
           <ScalarProperty Name="Town" ColumnName="Town" />
           <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductMovements">
+      <EntityTypeMapping TypeName="HotelDbModel.ProductMovements">
+        <MappingFragment StoreEntitySet="ProductMovements">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="MovementType" ColumnName="MovementType" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="MovementId" ColumnName="MovementId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

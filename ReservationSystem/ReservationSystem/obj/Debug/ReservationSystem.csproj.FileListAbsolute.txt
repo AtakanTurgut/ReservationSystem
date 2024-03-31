@@ -95,3 +95,6 @@ C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Customer.FrmCustomerList.resources
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Product.FrmProductCard.resources
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Product.FrmProductList.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Product.FrmProductInputMovements.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Product.FrmProductOutputMovements.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Product.FrmProductMovement.resources

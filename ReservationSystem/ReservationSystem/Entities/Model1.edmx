@@ -105,6 +105,17 @@
           <Property Name="ProductCategory" Type="nvarchar" MaxLength="50" />
           <Property Name="StatusId" Type="int" />
         </EntityType>
+        <EntityType Name="ProductMovements">
+          <Key>
+            <PropertyRef Name="MovementId" />
+          </Key>
+          <Property Name="MovementId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductId" Type="int" />
+          <Property Name="MovementType" Type="nvarchar" MaxLength="6" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Description" Type="nvarchar" MaxLength="275" />
+        </EntityType>
         <EntityType Name="Products">
           <Key>
             <PropertyRef Name="ProductId" />
@@ -117,6 +128,7 @@
           <Property Name="Total" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Kdv" Type="tinyint" />
           <Property Name="StatusId" Type="int" />
+          <Property Name="Descriptions" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Rates">
           <Key>
@@ -354,6 +366,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ProductMovements_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="ProductMovements" Type="Self.ProductMovements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="ProductMovements">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Products_ProductCategories">
           <End Role="ProductCategories" Type="Self.ProductCategories" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
@@ -448,6 +472,7 @@
           <EntitySet Name="Missions" EntityType="Self.Missions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Phones" EntityType="Self.Phones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductCategories" EntityType="Self.ProductCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductMovements" EntityType="Self.ProductMovements" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rates" EntityType="Self.Rates" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="dbo" store:Type="Tables" />
@@ -514,6 +539,10 @@
           <AssociationSet Name="FK_ProductCategories_Statuses" Association="Self.FK_ProductCategories_Statuses">
             <End Role="Statuses" EntitySet="Statuses" />
             <End Role="ProductCategories" EntitySet="ProductCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductMovements_Products" Association="Self.FK_ProductMovements_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductMovements" EntitySet="ProductMovements" />
           </AssociationSet>
           <AssociationSet Name="FK_Products_ProductCategories" Association="Self.FK_Products_ProductCategories">
             <End Role="ProductCategories" EntitySet="ProductCategories" />
@@ -676,6 +705,8 @@
           <NavigationProperty Name="ProductCategories" Relationship="Self.FK_Products_ProductCategories" FromRole="Products" ToRole="ProductCategories" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Products_Statuses" FromRole="Products" ToRole="Statuses" />
           <NavigationProperty Name="Units" Relationship="Self.FK_Products_Units" FromRole="Products" ToRole="Units" />
+          <Property Name="Descriptions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ProductMovements" Relationship="HotelDbModel.FK_ProductMovements_Products" FromRole="Products" ToRole="ProductMovements" />
         </EntityType>
         <EntityType Name="Rates">
           <Key>
@@ -1075,6 +1106,11 @@
             <End Role="Cities" EntitySet="Cities" />
             <End Role="Towns" EntitySet="Towns" />
           </AssociationSet>
+          <EntitySet Name="ProductMovements" EntityType="HotelDbModel.ProductMovements" />
+          <AssociationSet Name="FK_ProductMovements_Products" Association="HotelDbModel.FK_ProductMovements_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductMovements" EntitySet="ProductMovements" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Cities">
           <Key>
@@ -1128,6 +1164,30 @@
             </Principal>
             <Dependent Role="Towns">
               <PropertyRef Name="City" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ProductMovements">
+          <Key>
+            <PropertyRef Name="MovementId" />
+          </Key>
+          <Property Name="MovementId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductId" Type="Int32" />
+          <Property Name="MovementType" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Description" Type="String" MaxLength="275" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Products" Relationship="HotelDbModel.FK_ProductMovements_Products" FromRole="ProductMovements" ToRole="Products" />
+        </EntityType>
+        <Association Name="FK_ProductMovements_Products">
+          <End Type="HotelDbModel.Products" Role="Products" Multiplicity="0..1" />
+          <End Type="HotelDbModel.ProductMovements" Role="ProductMovements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="ProductMovements">
+              <PropertyRef Name="ProductId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1241,6 +1301,7 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="HotelDbModel.Products">
               <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
@@ -1319,6 +1380,18 @@
                 <ScalarProperty Name="City" ColumnName="City" />
                 <ScalarProperty Name="Town" ColumnName="Town" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductMovements">
+            <EntityTypeMapping TypeName="HotelDbModel.ProductMovements">
+              <MappingFragment StoreEntitySet="ProductMovements">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="MovementType" ColumnName="MovementType" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="MovementId" ColumnName="MovementId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

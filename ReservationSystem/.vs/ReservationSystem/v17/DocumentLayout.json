@@ -1,122 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|c:\\users\\excalibur\\desktop\\reservationsystem\\reservationsystem\\reservationsystem\\forms\\product\\frmproductcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|solutionrelative:reservationsystem\\forms\\product\\frmproductcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|c:\\users\\excalibur\\desktop\\reservationsystem\\reservationsystem\\reservationsystem\\forms\\product\\frmproductlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|solutionrelative:reservationsystem\\forms\\product\\frmproductlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\reservationsystem\\forms\\customer\\frmcustomercard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|solutionrelative:reservationsystem\\forms\\customer\\frmcustomercard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|c:\\users\\excalibur\\desktop\\reservationsystem\\reservationsystem\\reservationsystem\\forms\\product\\frmproductlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|solutionrelative:reservationsystem\\forms\\product\\frmproductlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\reservationsystem\\forms\\product\\frmproductcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|solutionrelative:reservationsystem\\forms\\product\\frmproductcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|c:\\users\\excalibur\\desktop\\reservationsystem\\reservationsystem\\reservationsystem\\forms\\customer\\frmcustomerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E9B6CD9-4A77-4132-94A6-A8BA69E5BECE}|ReservationSystem\\ReservationSystem.csproj|solutionrelative:reservationsystem\\forms\\customer\\frmcustomerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmCustomerCard.cs",
-              "DocumentMoniker": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Customer\\FrmCustomerCard.cs",
-              "RelativeDocumentMoniker": "ReservationSystem\\Forms\\Customer\\FrmCustomerCard.cs",
-              "ToolTip": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Customer\\FrmCustomerCard.cs",
-              "RelativeToolTip": "ReservationSystem\\Forms\\Customer\\FrmCustomerCard.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAuwKAAAACJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T12:30:11.68Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FrmCustomerList.cs",
-              "DocumentMoniker": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Customer\\FrmCustomerList.cs",
-              "RelativeDocumentMoniker": "ReservationSystem\\Forms\\Customer\\FrmCustomerList.cs",
-              "ToolTip": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Customer\\FrmCustomerList.cs",
-              "RelativeToolTip": "ReservationSystem\\Forms\\Customer\\FrmCustomerList.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAowDAAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T12:50:03.778Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmProductList.cs",
-              "DocumentMoniker": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductList.cs",
-              "RelativeDocumentMoniker": "ReservationSystem\\Forms\\Product\\FrmProductList.cs",
-              "ToolTip": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductList.cs",
-              "RelativeToolTip": "ReservationSystem\\Forms\\Product\\FrmProductList.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAlwCEAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T12:47:53.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmProductList.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductList.cs",
-              "RelativeDocumentMoniker": "ReservationSystem\\Forms\\Product\\FrmProductList.cs",
-              "ToolTip": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductList.cs [Design]",
-              "RelativeToolTip": "ReservationSystem\\Forms\\Product\\FrmProductList.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T12:47:34.991Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmProductCard.cs",
-              "DocumentMoniker": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductCard.cs",
-              "RelativeDocumentMoniker": "ReservationSystem\\Forms\\Product\\FrmProductCard.cs",
-              "ToolTip": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductCard.cs",
-              "RelativeToolTip": "ReservationSystem\\Forms\\Product\\FrmProductCard.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAAAFEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T12:04:59.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmProductCard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductCard.cs",
-              "RelativeDocumentMoniker": "ReservationSystem\\Forms\\Product\\FrmProductCard.cs",
-              "ToolTip": "C:\\Users\\Excalibur\\Desktop\\ReservationSystem\\ReservationSystem\\ReservationSystem\\Forms\\Product\\FrmProductCard.cs [Design]",
-              "RelativeToolTip": "ReservationSystem\\Forms\\Product\\FrmProductCard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T11:33:24.45Z",
-              "EditorCaption": " [Design]"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

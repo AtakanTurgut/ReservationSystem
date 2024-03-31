@@ -45,6 +45,11 @@
             this.btnEmployeeList = new DevExpress.XtraBars.BarButtonItem();
             this.btnNewEmployee = new DevExpress.XtraBars.BarButtonItem();
             this.btnNewCustomer = new DevExpress.XtraBars.BarButtonItem();
+            this.btnProductList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNewProduct = new DevExpress.XtraBars.BarButtonItem();
+            this.btnProductInput = new DevExpress.XtraBars.BarButtonItem();
+            this.btnProductOutput = new DevExpress.XtraBars.BarButtonItem();
+            this.btnProductMovement = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -53,13 +58,13 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnProductList = new DevExpress.XtraBars.BarButtonItem();
-            this.btnNewProduct = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -84,9 +89,12 @@
             this.btnNewEmployee,
             this.btnNewCustomer,
             this.btnProductList,
-            this.btnNewProduct});
+            this.btnNewProduct,
+            this.btnProductInput,
+            this.btnProductOutput,
+            this.btnProductMovement});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 18;
+            this.ribbonControl1.MaxItemId = 21;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -223,6 +231,51 @@
             this.btnNewCustomer.Name = "btnNewCustomer";
             this.btnNewCustomer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewCustomer_ItemClick);
             // 
+            // btnProductList
+            // 
+            this.btnProductList.Caption = "Ürün Listesi";
+            this.btnProductList.Id = 16;
+            this.btnProductList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProductList.ImageOptions.Image")));
+            this.btnProductList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnProductList.ImageOptions.LargeImage")));
+            this.btnProductList.Name = "btnProductList";
+            this.btnProductList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductList_ItemClick);
+            // 
+            // btnNewProduct
+            // 
+            this.btnNewProduct.Caption = "Ürün Kartı";
+            this.btnNewProduct.Id = 17;
+            this.btnNewProduct.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNewProduct.ImageOptions.Image")));
+            this.btnNewProduct.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNewProduct.ImageOptions.LargeImage")));
+            this.btnNewProduct.Name = "btnNewProduct";
+            this.btnNewProduct.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewProduct_ItemClick);
+            // 
+            // btnProductInput
+            // 
+            this.btnProductInput.Caption = "Ürün Giriş Hareketleri";
+            this.btnProductInput.Id = 18;
+            this.btnProductInput.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProductInput.ImageOptions.Image")));
+            this.btnProductInput.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnProductInput.ImageOptions.LargeImage")));
+            this.btnProductInput.Name = "btnProductInput";
+            this.btnProductInput.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductInput_ItemClick);
+            // 
+            // btnProductOutput
+            // 
+            this.btnProductOutput.Caption = "Ürün Çıkış Hareketleri";
+            this.btnProductOutput.Id = 19;
+            this.btnProductOutput.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProductOutput.ImageOptions.Image")));
+            this.btnProductOutput.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnProductOutput.ImageOptions.LargeImage")));
+            this.btnProductOutput.Name = "btnProductOutput";
+            this.btnProductOutput.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductOutput_ItemClick);
+            // 
+            // btnProductMovement
+            // 
+            this.btnProductMovement.Caption = "Yeni Ürün Hareketi";
+            this.btnProductMovement.Id = 20;
+            this.btnProductMovement.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProductMovement.ImageOptions.Image")));
+            this.btnProductMovement.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnProductMovement.ImageOptions.LargeImage")));
+            this.btnProductMovement.Name = "btnProductMovement";
+            this.btnProductMovement.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductMovement_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -263,7 +316,9 @@
             // ribbonPage4
             // 
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup7,
+            this.ribbonPageGroup8});
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "Ürünler";
             // 
@@ -272,6 +327,17 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.btnProductList);
             this.ribbonPageGroup4.ItemLinks.Add(this.btnNewProduct);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnProductInput);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnProductOutput);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnProductMovement);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             // 
             // ribbonPage5
             // 
@@ -309,24 +375,6 @@
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // btnProductList
-            // 
-            this.btnProductList.Caption = "Ürün Listesi";
-            this.btnProductList.Id = 16;
-            this.btnProductList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btnProductList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.btnProductList.Name = "btnProductList";
-            this.btnProductList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductList_ItemClick);
-            // 
-            // btnNewProduct
-            // 
-            this.btnNewProduct.Caption = "Ürün Kartı";
-            this.btnNewProduct.Id = 17;
-            this.btnNewProduct.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.btnNewProduct.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.btnNewProduct.Name = "btnNewProduct";
-            this.btnNewProduct.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewProduct_ItemClick);
             // 
             // Form1
             // 
@@ -379,6 +427,11 @@
         private DevExpress.XtraBars.BarButtonItem btnNewCustomer;
         private DevExpress.XtraBars.BarButtonItem btnProductList;
         private DevExpress.XtraBars.BarButtonItem btnNewProduct;
+        private DevExpress.XtraBars.BarButtonItem btnProductInput;
+        private DevExpress.XtraBars.BarButtonItem btnProductOutput;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem btnProductMovement;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
     }
 }
 

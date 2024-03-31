@@ -115,5 +115,25 @@ namespace ReservationSystem
             Forms.Product.FrmProductCard FrmProductCard = new Forms.Product.FrmProductCard();
             FrmProductCard.Show();
         }
+
+        private void btnProductInput_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Product.FrmProductInputMovements FrmProductInputMovements = new Forms.Product.FrmProductInputMovements();
+            FrmProductInputMovements.MdiParent = this;
+            FrmProductInputMovements.Show();
+        }
+
+        private void btnProductOutput_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Product.FrmProductOutputMovements FrmProductOutputMovements = new Forms.Product.FrmProductOutputMovements();
+            FrmProductOutputMovements.MdiParent = this;
+            FrmProductOutputMovements.Show();
+        }
+
+        private void btnProductMovement_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Product.FrmProductMovement FrmProductMovement = new Forms.Product.FrmProductMovement();
+            FrmProductMovement.Show();
+        }
     }
 }

@@ -43,6 +43,8 @@
         <AssociationConnector Association="HotelDbModel.FK_Customers_Cities" />
         <AssociationConnector Association="HotelDbModel.FK_Customers_Towns" />
         <AssociationConnector Association="HotelDbModel.FK_Towns_Cities" />
+        <EntityTypeShape EntityType="HotelDbModel.ProductMovements" Width="1.5" PointX="7.5" PointY="21.875" />
+        <AssociationConnector Association="HotelDbModel.FK_ProductMovements_Products" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
