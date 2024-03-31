@@ -102,5 +102,18 @@ namespace ReservationSystem
             FrmCustomerList.MdiParent = this;
             FrmCustomerList.Show();
         }
+
+        private void btnProductList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Product.FrmProductList FrmProductList = new Forms.Product.FrmProductList();
+            FrmProductList.MdiParent = this;
+            FrmProductList.Show();
+        }
+
+        private void btnNewProduct_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Product.FrmProductCard FrmProductCard = new Forms.Product.FrmProductCard();
+            FrmProductCard.Show();
+        }
     }
 }

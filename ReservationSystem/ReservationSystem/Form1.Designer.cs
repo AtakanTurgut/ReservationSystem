@@ -58,6 +58,8 @@
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btnProductList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNewProduct = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -80,9 +82,11 @@
             this.btnProductCategoryDefinitions,
             this.btnEmployeeList,
             this.btnNewEmployee,
-            this.btnNewCustomer});
+            this.btnNewCustomer,
+            this.btnProductList,
+            this.btnNewProduct});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 16;
+            this.ribbonControl1.MaxItemId = 18;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -265,8 +269,9 @@
             // 
             // ribbonPageGroup4
             // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnProductList);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnNewProduct);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
             // 
             // ribbonPage5
             // 
@@ -304,6 +309,24 @@
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // btnProductList
+            // 
+            this.btnProductList.Caption = "Ürün Listesi";
+            this.btnProductList.Id = 16;
+            this.btnProductList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.btnProductList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btnProductList.Name = "btnProductList";
+            this.btnProductList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductList_ItemClick);
+            // 
+            // btnNewProduct
+            // 
+            this.btnNewProduct.Caption = "Ürün Kartı";
+            this.btnNewProduct.Id = 17;
+            this.btnNewProduct.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.btnNewProduct.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.btnNewProduct.Name = "btnNewProduct";
+            this.btnNewProduct.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewProduct_ItemClick);
             // 
             // Form1
             // 
@@ -354,6 +377,8 @@
         private DevExpress.XtraBars.BarButtonItem btnNewEmployee;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarButtonItem btnNewCustomer;
+        private DevExpress.XtraBars.BarButtonItem btnProductList;
+        private DevExpress.XtraBars.BarButtonItem btnNewProduct;
     }
 }
 
