@@ -22,9 +22,24 @@ namespace ReservationSystem.Forms.Product
 
         HotelDbEntities db = new HotelDbEntities();
         Repository<Products> repository = new Repository<Products>();
- 
+        public int id;
+
         private void FrmProductCard_Load(object sender, EventArgs e)
         {
+            this.Text = id.ToString();
+
+            if (id != 0)
+            { 
+                var product = repository.Find(x => x.ProductId == id);
+                txtProductName.Text = product.ProductName;
+                lookUpEditCategory.EditValue = product.ProductCategoryId;
+                lookUpEditUnit.EditValue = product.UnitId;
+                lookUpEditStatus.EditValue = product.StatusId;
+                txtProductPrice.Text = product.Price.ToString();
+                txtProductTotal.Text = product.Total.ToString();
+                txtProductKdv.Text = product.Kdv.ToString();
+            }
+
             lookUpEditUnit.Properties.DataSource = (from x in db.Units select new
             {
                 x.UnitId,
@@ -57,11 +72,28 @@ namespace ReservationSystem.Forms.Product
             product.UnitId = int.Parse(lookUpEditUnit.EditValue.ToString());
             product.StatusId = int.Parse(lookUpEditStatus.EditValue.ToString());
             product.Price = decimal.Parse(txtProductPrice.Text);
-            product.Total = int.Parse(txtProductTotal.Text);
+            product.Total = decimal.Parse(txtProductTotal.Text);
             product.Kdv = byte.Parse(txtProductKdv.Text);
 
             repository.TAdd(product);
+
             XtraMessageBox.Show("Ürün başarılı bir şekilde sisteme kaydedildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            var value = repository.Find(x => x.ProductId == id);
+            value.ProductName = txtProductName.Text;
+            value.ProductCategoryId = int.Parse(lookUpEditCategory.EditValue.ToString());
+            value.UnitId = int.Parse(lookUpEditUnit.EditValue.ToString());
+            value.StatusId = int.Parse(lookUpEditStatus.EditValue.ToString());
+            value.Price = decimal.Parse(txtProductPrice.Text);
+            value.Total = decimal.Parse(txtProductTotal.Text);
+            value.Kdv = byte.Parse(txtProductKdv.Text);
+
+            repository.TUpdate(value);
+
+            XtraMessageBox.Show("Ürün kartı bilgileri başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

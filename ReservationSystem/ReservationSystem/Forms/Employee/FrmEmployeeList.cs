@@ -51,11 +51,5 @@ namespace ReservationSystem.Forms.Employee
             bindingSource.RemoveCurrent();
             db.SaveChanges();
         }
-
-        private void personeliSilToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            bindingSource.RemoveCurrent();
-            db.SaveChanges();
-        }
     }
 }

@@ -73,7 +73,7 @@
             this.personeliSilToolStripMenuItem.Name = "personeliSilToolStripMenuItem";
             this.personeliSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personeliSilToolStripMenuItem.Text = "Personeli Sil";
-            this.personeliSilToolStripMenuItem.Click += new System.EventHandler(this.personeliSilToolStripMenuItem_Click_1);
+            this.personeliSilToolStripMenuItem.Click += new System.EventHandler(this.personeliSilToolStripMenuItem_Click);
             // 
             // vazgeçToolStripMenuItem
             // 
