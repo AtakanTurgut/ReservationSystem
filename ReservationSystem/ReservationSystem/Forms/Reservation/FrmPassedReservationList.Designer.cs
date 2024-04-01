@@ -65,18 +65,19 @@
             this.rezervasyonSilToolStripMenuItem,
             this.vazgeçToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(162, 48);
+            this.contextMenuStrip.Size = new System.Drawing.Size(181, 70);
             // 
             // rezervasyonSilToolStripMenuItem
             // 
             this.rezervasyonSilToolStripMenuItem.Name = "rezervasyonSilToolStripMenuItem";
-            this.rezervasyonSilToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.rezervasyonSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rezervasyonSilToolStripMenuItem.Text = "Rezervasyonu Sil";
+            this.rezervasyonSilToolStripMenuItem.Click += new System.EventHandler(this.rezervasyonSilToolStripMenuItem_Click);
             // 
             // vazgeçToolStripMenuItem
             // 
             this.vazgeçToolStripMenuItem.Name = "vazgeçToolStripMenuItem";
-            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vazgeçToolStripMenuItem.Text = "Vazgeç";
             // 
             // FrmPassedReservationList
@@ -88,6 +89,7 @@
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmPassedReservationList";
             this.Text = "Geçmiş Rezervasyon Listesi";
+            this.Load += new System.EventHandler(this.FrmPassedReservationList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
