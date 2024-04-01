@@ -177,5 +177,41 @@ namespace ReservationSystem
             FrmFutureReservationList.MdiParent = this;
             FrmFutureReservationList.Show();
         }
+
+        private void btnRate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Tools.FrmRate FrmRate = new Forms.Tools.FrmRate();
+            FrmRate.MdiParent = this;
+            FrmRate.Show();
+        }
+
+        private void btnYouTube_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Tools.FrmYouTube FrmYouTube = new Forms.Tools.FrmYouTube();
+            FrmYouTube.MdiParent = this;
+            FrmYouTube.Show();
+        }
+
+        private void btnGoogle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Tools.FrmGoogle FrmGoogle = new Forms.Tools.FrmGoogle();
+            FrmGoogle.MdiParent = this;
+            FrmGoogle.Show();
+        }
+
+        private void btnCalculator_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("Calc.exe");
+        }
+
+        private void btnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("winword");
+        }
+
+        private void btnExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("excel");
+        }
     }
 }

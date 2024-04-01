@@ -104,3 +104,6 @@ C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Reservation.FrmPassiveReservationList.resources
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Reservation.FrmReservationList.resources
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Reservation.FrmFutureReservationList.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Tools.FrmGoogle.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Tools.FrmRate.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Tools.FrmYouTube.resources

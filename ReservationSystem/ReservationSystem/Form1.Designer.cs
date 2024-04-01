@@ -56,6 +56,17 @@
             this.btnPassiveReservationList = new DevExpress.XtraBars.BarButtonItem();
             this.btnPassedReservationList = new DevExpress.XtraBars.BarButtonItem();
             this.btnFutureReservationList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAgenda = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRate = new DevExpress.XtraBars.BarButtonItem();
+            this.btnYouTube = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGoogle = new DevExpress.XtraBars.BarButtonItem();
+            this.btnWord = new DevExpress.XtraBars.BarButtonItem();
+            this.btnExcel = new DevExpress.XtraBars.BarButtonItem();
+            this.asdx = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPassword = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAuthority = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHelp = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCalculator = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -71,6 +82,9 @@
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -105,9 +119,20 @@
             this.btnActiveReservationList,
             this.btnPassiveReservationList,
             this.btnPassedReservationList,
-            this.btnFutureReservationList});
+            this.btnFutureReservationList,
+            this.btnAgenda,
+            this.btnRate,
+            this.btnYouTube,
+            this.btnGoogle,
+            this.btnWord,
+            this.btnExcel,
+            this.asdx,
+            this.btnPassword,
+            this.btnAuthority,
+            this.btnHelp,
+            this.btnCalculator});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 27;
+            this.ribbonControl1.MaxItemId = 38;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -115,7 +140,8 @@
             this.ribbonPage3,
             this.ribbonPage4,
             this.ribbonPage5,
-            this.ribbonPage6});
+            this.ribbonPage6,
+            this.ribbonPage7});
             this.ribbonControl1.Size = new System.Drawing.Size(1034, 150);
             // 
             // btnCustomerList
@@ -343,6 +369,98 @@
             this.btnFutureReservationList.Name = "btnFutureReservationList";
             this.btnFutureReservationList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFutureReservationList_ItemClick);
             // 
+            // btnAgenda
+            // 
+            this.btnAgenda.Caption = "Ajanda";
+            this.btnAgenda.Id = 27;
+            this.btnAgenda.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAgenda.ImageOptions.Image")));
+            this.btnAgenda.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAgenda.ImageOptions.LargeImage")));
+            this.btnAgenda.Name = "btnAgenda";
+            // 
+            // btnRate
+            // 
+            this.btnRate.Caption = "Kurlar";
+            this.btnRate.Id = 28;
+            this.btnRate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRate.ImageOptions.Image")));
+            this.btnRate.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRate.ImageOptions.LargeImage")));
+            this.btnRate.Name = "btnRate";
+            this.btnRate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRate_ItemClick);
+            // 
+            // btnYouTube
+            // 
+            this.btnYouTube.Caption = "YouTube";
+            this.btnYouTube.Id = 29;
+            this.btnYouTube.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYouTube.ImageOptions.Image")));
+            this.btnYouTube.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYouTube.ImageOptions.LargeImage")));
+            this.btnYouTube.Name = "btnYouTube";
+            this.btnYouTube.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYouTube_ItemClick);
+            // 
+            // btnGoogle
+            // 
+            this.btnGoogle.Caption = "Google";
+            this.btnGoogle.Id = 30;
+            this.btnGoogle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGoogle.ImageOptions.Image")));
+            this.btnGoogle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGoogle.ImageOptions.LargeImage")));
+            this.btnGoogle.Name = "btnGoogle";
+            this.btnGoogle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGoogle_ItemClick);
+            // 
+            // btnWord
+            // 
+            this.btnWord.Caption = "Word";
+            this.btnWord.Id = 31;
+            this.btnWord.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnWord.ImageOptions.Image")));
+            this.btnWord.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnWord.ImageOptions.LargeImage")));
+            this.btnWord.Name = "btnWord";
+            this.btnWord.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWord_ItemClick);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Caption = "Excel";
+            this.btnExcel.Id = 32;
+            this.btnExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.ImageOptions.Image")));
+            this.btnExcel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnExcel.ImageOptions.LargeImage")));
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExcel_ItemClick);
+            // 
+            // asdx
+            // 
+            this.asdx.Caption = "Şifre İşlemleri";
+            this.asdx.Id = 33;
+            this.asdx.Name = "asdx";
+            // 
+            // btnPassword
+            // 
+            this.btnPassword.Caption = "Şifre İşlemleri";
+            this.btnPassword.Id = 34;
+            this.btnPassword.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPassword.ImageOptions.Image")));
+            this.btnPassword.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPassword.ImageOptions.LargeImage")));
+            this.btnPassword.Name = "btnPassword";
+            // 
+            // btnAuthority
+            // 
+            this.btnAuthority.Caption = "Yetkiler";
+            this.btnAuthority.Id = 35;
+            this.btnAuthority.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAuthority.ImageOptions.Image")));
+            this.btnAuthority.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAuthority.ImageOptions.LargeImage")));
+            this.btnAuthority.Name = "btnAuthority";
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.Caption = "Yardım";
+            this.btnHelp.Id = 36;
+            this.btnHelp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.ImageOptions.Image")));
+            this.btnHelp.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHelp.ImageOptions.LargeImage")));
+            this.btnHelp.Name = "btnHelp";
+            // 
+            // btnCalculator
+            // 
+            this.btnCalculator.Caption = "Hesap Makinesi";
+            this.btnCalculator.Id = 37;
+            this.btnCalculator.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCalculator.ImageOptions.Image")));
+            this.btnCalculator.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCalculator.ImageOptions.LargeImage")));
+            this.btnCalculator.Name = "btnCalculator";
+            this.btnCalculator.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCalculator_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -449,6 +567,32 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.btnProductCategoryDefinitions);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
+            // ribbonPage7
+            // 
+            this.ribbonPage7.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup10,
+            this.ribbonPageGroup11});
+            this.ribbonPage7.Name = "ribbonPage7";
+            this.ribbonPage7.Text = "Araçlar";
+            // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnAgenda);
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnRate);
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnYouTube);
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnGoogle);
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnCalculator);
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnWord);
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnExcel);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            // 
+            // ribbonPageGroup11
+            // 
+            this.ribbonPageGroup11.ItemLinks.Add(this.btnPassword);
+            this.ribbonPageGroup11.ItemLinks.Add(this.btnAuthority);
+            this.ribbonPageGroup11.ItemLinks.Add(this.btnHelp);
+            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
+            // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
@@ -516,6 +660,20 @@
         private DevExpress.XtraBars.BarButtonItem btnPassedReservationList;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem btnFutureReservationList;
+        private DevExpress.XtraBars.BarButtonItem btnAgenda;
+        private DevExpress.XtraBars.BarButtonItem btnRate;
+        private DevExpress.XtraBars.BarButtonItem btnYouTube;
+        private DevExpress.XtraBars.BarButtonItem btnGoogle;
+        private DevExpress.XtraBars.BarButtonItem btnWord;
+        private DevExpress.XtraBars.BarButtonItem btnExcel;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.BarButtonItem asdx;
+        private DevExpress.XtraBars.BarButtonItem btnPassword;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
+        private DevExpress.XtraBars.BarButtonItem btnAuthority;
+        private DevExpress.XtraBars.BarButtonItem btnHelp;
+        private DevExpress.XtraBars.BarButtonItem btnCalculator;
     }
 }
 

@@ -290,6 +290,24 @@
     <Compile Include="Forms\Reservation\FrmReservationList.Designer.cs">
       <DependentUpon>FrmReservationList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tools\FrmGoogle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FrmGoogle.Designer.cs">
+      <DependentUpon>FrmGoogle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\FrmRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FrmRate.Designer.cs">
+      <DependentUpon>FrmRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\FrmYouTube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\FrmYouTube.Designer.cs">
+      <DependentUpon>FrmYouTube.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Repository.cs" />
@@ -370,6 +388,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reservation\FrmReservationList.resx">
       <DependentUpon>FrmReservationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\FrmGoogle.resx">
+      <DependentUpon>FrmGoogle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\FrmRate.resx">
+      <DependentUpon>FrmRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\FrmYouTube.resx">
+      <DependentUpon>FrmYouTube.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
