@@ -135,5 +135,11 @@ namespace ReservationSystem
             Forms.Product.FrmProductMovement FrmProductMovement = new Forms.Product.FrmProductMovement();
             FrmProductMovement.Show();
         }
+
+        private void btnNewReservation_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Reservation.FrmReservationCard FrmReservationCard = new Forms.Reservation.FrmReservationCard();
+            FrmReservationCard.Show();
+        }
     }
 }

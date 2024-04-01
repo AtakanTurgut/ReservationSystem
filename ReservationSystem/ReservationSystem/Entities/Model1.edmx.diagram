@@ -45,6 +45,10 @@
         <AssociationConnector Association="HotelDbModel.FK_Towns_Cities" />
         <EntityTypeShape EntityType="HotelDbModel.ProductMovements" Width="1.5" PointX="7.5" PointY="21.875" />
         <AssociationConnector Association="HotelDbModel.FK_ProductMovements_Products" />
+        <EntityTypeShape EntityType="HotelDbModel.Reservations" Width="1.5" PointX="10.5" PointY="19.875" />
+        <AssociationConnector Association="HotelDbModel.FK_Reservations_Customers" />
+        <AssociationConnector Association="HotelDbModel.FK_Reservations_Rooms" />
+        <AssociationConnector Association="HotelDbModel.FK_Reservations_Statuses" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

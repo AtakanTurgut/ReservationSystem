@@ -29,6 +29,7 @@ namespace ReservationSystem.Entities
             this.Rates = new HashSet<Rates>();
             this.Rooms = new HashSet<Rooms>();
             this.Units = new HashSet<Units>();
+            this.Reservations = new HashSet<Reservations>();
         }
     
         public int StatusId { get; set; }
@@ -58,5 +59,7 @@ namespace ReservationSystem.Entities
         public virtual ICollection<Rooms> Rooms { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Units> Units { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Reservations> Reservations { get; set; }
     }
 }

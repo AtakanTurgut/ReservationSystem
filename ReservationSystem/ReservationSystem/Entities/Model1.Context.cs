@@ -42,5 +42,6 @@ namespace ReservationSystem.Entities
         public virtual DbSet<Cities> Cities { get; set; }
         public virtual DbSet<Towns> Towns { get; set; }
         public virtual DbSet<ProductMovements> ProductMovements { get; set; }
+        public virtual DbSet<Reservations> Reservations { get; set; }
     }
 }

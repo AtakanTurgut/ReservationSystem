@@ -141,6 +141,21 @@
           <Property Name="Date" Type="date" />
           <Property Name="StatusId" Type="int" />
         </EntityType>
+        <EntityType Name="Reservations">
+          <Key>
+            <PropertyRef Name="ReservationId" />
+          </Key>
+          <Property Name="ReservationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerId" Type="int" />
+          <Property Name="EntryDate" Type="date" />
+          <Property Name="LeavingDate" Type="date" />
+          <Property Name="People" Type="char" MaxLength="1" />
+          <Property Name="RoomId" Type="int" />
+          <Property Name="ReservationNameSurname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="StatusId" Type="int" />
+        </EntityType>
         <EntityType Name="Rooms">
           <Key>
             <PropertyRef Name="RoomId" />
@@ -426,6 +441,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Reservations_Customers">
+          <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
+          <End Role="Reservations" Type="Self.Reservations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="CustomerId" />
+            </Principal>
+            <Dependent Role="Reservations">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reservations_Rooms">
+          <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1" />
+          <End Role="Reservations" Type="Self.Reservations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rooms">
+              <PropertyRef Name="RoomId" />
+            </Principal>
+            <Dependent Role="Reservations">
+              <PropertyRef Name="RoomId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reservations_Statuses">
+          <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
+          <End Role="Reservations" Type="Self.Reservations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Statuses">
+              <PropertyRef Name="StatusId" />
+            </Principal>
+            <Dependent Role="Reservations">
+              <PropertyRef Name="StatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Rooms_Statuses">
           <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
           <End Role="Rooms" Type="Self.Rooms" Multiplicity="*" />
@@ -475,6 +526,7 @@
           <EntitySet Name="ProductMovements" EntityType="Self.ProductMovements" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rates" EntityType="Self.Rates" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reservations" EntityType="Self.Reservations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Statuses" EntityType="Self.Statuses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -560,6 +612,18 @@
             <End Role="Statuses" EntitySet="Statuses" />
             <End Role="Rates" EntitySet="Rates" />
           </AssociationSet>
+          <AssociationSet Name="FK_Reservations_Customers" Association="Self.FK_Reservations_Customers">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Reservations" EntitySet="Reservations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reservations_Rooms" Association="Self.FK_Reservations_Rooms">
+            <End Role="Rooms" EntitySet="Rooms" />
+            <End Role="Reservations" EntitySet="Reservations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reservations_Statuses" Association="Self.FK_Reservations_Statuses">
+            <End Role="Statuses" EntitySet="Statuses" />
+            <End Role="Reservations" EntitySet="Reservations" />
+          </AssociationSet>
           <AssociationSet Name="FK_Rooms_Statuses" Association="Self.FK_Rooms_Statuses">
             <End Role="Statuses" EntitySet="Statuses" />
             <End Role="Rooms" EntitySet="Rooms" />
@@ -622,6 +686,7 @@
           <Property Name="TownId" Type="Int32" />
           <NavigationProperty Name="Cities" Relationship="HotelDbModel.FK_Customers_Cities" FromRole="Customers" ToRole="Cities" />
           <NavigationProperty Name="Towns" Relationship="HotelDbModel.FK_Customers_Towns" FromRole="Customers" ToRole="Towns" />
+          <NavigationProperty Name="Reservations" Relationship="HotelDbModel.FK_Reservations_Customers" FromRole="Customers" ToRole="Reservations" />
         </EntityType>
         <EntityType Name="Departments">
           <Key>
@@ -733,6 +798,7 @@
           <Property Name="StatusId" Type="Int32" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_Rooms" FromRole="Rooms" ToRole="Customers" />
           <NavigationProperty Name="Statuses" Relationship="Self.FK_Rooms_Statuses" FromRole="Rooms" ToRole="Statuses" />
+          <NavigationProperty Name="Reservations" Relationship="HotelDbModel.FK_Reservations_Rooms" FromRole="Rooms" ToRole="Reservations" />
         </EntityType>
         <EntityType Name="Statuses">
           <Key>
@@ -752,6 +818,7 @@
           <NavigationProperty Name="Rates" Relationship="Self.FK_Rates_Statuses" FromRole="Statuses" ToRole="Rates" />
           <NavigationProperty Name="Rooms" Relationship="Self.FK_Rooms_Statuses" FromRole="Statuses" ToRole="Rooms" />
           <NavigationProperty Name="Units" Relationship="Self.FK_Units_Statuses" FromRole="Statuses" ToRole="Units" />
+          <NavigationProperty Name="Reservations" Relationship="HotelDbModel.FK_Reservations_Statuses" FromRole="Statuses" ToRole="Reservations" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -1111,6 +1178,19 @@
             <End Role="Products" EntitySet="Products" />
             <End Role="ProductMovements" EntitySet="ProductMovements" />
           </AssociationSet>
+          <EntitySet Name="Reservations" EntityType="HotelDbModel.Reservations" />
+          <AssociationSet Name="FK_Reservations_Customers" Association="HotelDbModel.FK_Reservations_Customers">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Reservations" EntitySet="Reservations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reservations_Rooms" Association="HotelDbModel.FK_Reservations_Rooms">
+            <End Role="Rooms" EntitySet="Rooms" />
+            <End Role="Reservations" EntitySet="Reservations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reservations_Statuses" Association="HotelDbModel.FK_Reservations_Statuses">
+            <End Role="Statuses" EntitySet="Statuses" />
+            <End Role="Reservations" EntitySet="Reservations" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Cities">
           <Key>
@@ -1188,6 +1268,60 @@
             </Principal>
             <Dependent Role="ProductMovements">
               <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Reservations">
+          <Key>
+            <PropertyRef Name="ReservationId" />
+          </Key>
+          <Property Name="ReservationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerId" Type="Int32" />
+          <Property Name="EntryDate" Type="DateTime" Precision="0" />
+          <Property Name="LeavingDate" Type="DateTime" Precision="0" />
+          <Property Name="People" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="RoomId" Type="Int32" />
+          <Property Name="ReservationNameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="StatusId" Type="Int32" />
+          <NavigationProperty Name="Customers" Relationship="HotelDbModel.FK_Reservations_Customers" FromRole="Reservations" ToRole="Customers" />
+          <NavigationProperty Name="Rooms" Relationship="HotelDbModel.FK_Reservations_Rooms" FromRole="Reservations" ToRole="Rooms" />
+          <NavigationProperty Name="Statuses" Relationship="HotelDbModel.FK_Reservations_Statuses" FromRole="Reservations" ToRole="Statuses" />
+        </EntityType>
+        <Association Name="FK_Reservations_Customers">
+          <End Type="HotelDbModel.Customers" Role="Customers" Multiplicity="0..1" />
+          <End Type="HotelDbModel.Reservations" Role="Reservations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="CustomerId" />
+            </Principal>
+            <Dependent Role="Reservations">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reservations_Rooms">
+          <End Type="HotelDbModel.Rooms" Role="Rooms" Multiplicity="0..1" />
+          <End Type="HotelDbModel.Reservations" Role="Reservations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rooms">
+              <PropertyRef Name="RoomId" />
+            </Principal>
+            <Dependent Role="Reservations">
+              <PropertyRef Name="RoomId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reservations_Statuses">
+          <End Type="HotelDbModel.Statuses" Role="Statuses" Multiplicity="0..1" />
+          <End Type="HotelDbModel.Reservations" Role="Reservations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Statuses">
+              <PropertyRef Name="StatusId" />
+            </Principal>
+            <Dependent Role="Reservations">
+              <PropertyRef Name="StatusId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1392,6 +1526,22 @@
                 <ScalarProperty Name="MovementType" ColumnName="MovementType" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="MovementId" ColumnName="MovementId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reservations">
+            <EntityTypeMapping TypeName="HotelDbModel.Reservations">
+              <MappingFragment StoreEntitySet="Reservations">
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="ReservationNameSurname" ColumnName="ReservationNameSurname" />
+                <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+                <ScalarProperty Name="People" ColumnName="People" />
+                <ScalarProperty Name="LeavingDate" ColumnName="LeavingDate" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
