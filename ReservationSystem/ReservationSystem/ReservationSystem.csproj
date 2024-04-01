@@ -254,11 +254,41 @@
     <Compile Include="Forms\Product\FrmProductOutputMovements.Designer.cs">
       <DependentUpon>FrmProductOutputMovements.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Reservation\FrmActiveReservationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmActiveReservationList.Designer.cs">
+      <DependentUpon>FrmActiveReservationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmFutureReservationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmFutureReservationList.Designer.cs">
+      <DependentUpon>FrmFutureReservationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmPassedReservationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmPassedReservationList.Designer.cs">
+      <DependentUpon>FrmPassedReservationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmPassiveReservationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmPassiveReservationList.Designer.cs">
+      <DependentUpon>FrmPassiveReservationList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Reservation\FrmReservationCard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Reservation\FrmReservationCard.Designer.cs">
       <DependentUpon>FrmReservationCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmReservationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmReservationList.Designer.cs">
+      <DependentUpon>FrmReservationList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -323,8 +353,23 @@
     <EmbeddedResource Include="Forms\Product\FrmProductOutputMovements.resx">
       <DependentUpon>FrmProductOutputMovements.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reservation\FrmActiveReservationList.resx">
+      <DependentUpon>FrmActiveReservationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reservation\FrmFutureReservationList.resx">
+      <DependentUpon>FrmFutureReservationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reservation\FrmPassedReservationList.resx">
+      <DependentUpon>FrmPassedReservationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reservation\FrmPassiveReservationList.resx">
+      <DependentUpon>FrmPassiveReservationList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reservation\FrmReservationCard.resx">
       <DependentUpon>FrmReservationCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reservation\FrmReservationList.resx">
+      <DependentUpon>FrmReservationList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -50,6 +50,12 @@
             this.btnProductInput = new DevExpress.XtraBars.BarButtonItem();
             this.btnProductOutput = new DevExpress.XtraBars.BarButtonItem();
             this.btnProductMovement = new DevExpress.XtraBars.BarButtonItem();
+            this.btnReservationList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNewReservation = new DevExpress.XtraBars.BarButtonItem();
+            this.btnActiveReservationList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPassiveReservationList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPassedReservationList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFutureReservationList = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -62,11 +68,10 @@
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnReservationList = new DevExpress.XtraBars.BarButtonItem();
-            this.btnNewReservation = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -96,9 +101,13 @@
             this.btnProductOutput,
             this.btnProductMovement,
             this.btnReservationList,
-            this.btnNewReservation});
+            this.btnNewReservation,
+            this.btnActiveReservationList,
+            this.btnPassiveReservationList,
+            this.btnPassedReservationList,
+            this.btnFutureReservationList});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 23;
+            this.ribbonControl1.MaxItemId = 27;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -280,6 +289,60 @@
             this.btnProductMovement.Name = "btnProductMovement";
             this.btnProductMovement.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductMovement_ItemClick);
             // 
+            // btnReservationList
+            // 
+            this.btnReservationList.Caption = "Rezervasyon Listesi";
+            this.btnReservationList.Id = 21;
+            this.btnReservationList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnReservationList.ImageOptions.Image")));
+            this.btnReservationList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnReservationList.ImageOptions.LargeImage")));
+            this.btnReservationList.Name = "btnReservationList";
+            this.btnReservationList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReservationList_ItemClick);
+            // 
+            // btnNewReservation
+            // 
+            this.btnNewReservation.Caption = "Rezervasyon Kartı";
+            this.btnNewReservation.Id = 22;
+            this.btnNewReservation.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNewReservation.ImageOptions.Image")));
+            this.btnNewReservation.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNewReservation.ImageOptions.LargeImage")));
+            this.btnNewReservation.Name = "btnNewReservation";
+            this.btnNewReservation.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewReservation_ItemClick);
+            // 
+            // btnActiveReservationList
+            // 
+            this.btnActiveReservationList.Caption = "Aktif Rezervasyon Listesi";
+            this.btnActiveReservationList.Id = 23;
+            this.btnActiveReservationList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnActiveReservationList.ImageOptions.Image")));
+            this.btnActiveReservationList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnActiveReservationList.ImageOptions.LargeImage")));
+            this.btnActiveReservationList.Name = "btnActiveReservationList";
+            this.btnActiveReservationList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActiveReservationList_ItemClick);
+            // 
+            // btnPassiveReservationList
+            // 
+            this.btnPassiveReservationList.Caption = "İptal Edilen Rezervasyon Listesi";
+            this.btnPassiveReservationList.Id = 24;
+            this.btnPassiveReservationList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPassiveReservationList.ImageOptions.Image")));
+            this.btnPassiveReservationList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPassiveReservationList.ImageOptions.LargeImage")));
+            this.btnPassiveReservationList.Name = "btnPassiveReservationList";
+            this.btnPassiveReservationList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPassiveReservationList_ItemClick);
+            // 
+            // btnPassedReservationList
+            // 
+            this.btnPassedReservationList.Caption = "Geçmiş Rezervasyon Listesi";
+            this.btnPassedReservationList.Id = 25;
+            this.btnPassedReservationList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPassedReservationList.ImageOptions.Image")));
+            this.btnPassedReservationList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPassedReservationList.ImageOptions.LargeImage")));
+            this.btnPassedReservationList.Name = "btnPassedReservationList";
+            this.btnPassedReservationList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPassedReservationList_ItemClick);
+            // 
+            // btnFutureReservationList
+            // 
+            this.btnFutureReservationList.Caption = "Gelecek Rezervasyon Listesi";
+            this.btnFutureReservationList.Id = 26;
+            this.btnFutureReservationList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFutureReservationList.ImageOptions.Image")));
+            this.btnFutureReservationList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnFutureReservationList.ImageOptions.LargeImage")));
+            this.btnFutureReservationList.Name = "btnFutureReservationList";
+            this.btnFutureReservationList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFutureReservationList_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -346,7 +409,8 @@
             // ribbonPage5
             // 
             this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup5});
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup9});
             this.ribbonPage5.Name = "ribbonPage5";
             this.ribbonPage5.Text = "Rezervasyonlar";
             // 
@@ -355,6 +419,14 @@
             this.ribbonPageGroup5.ItemLinks.Add(this.btnReservationList);
             this.ribbonPageGroup5.ItemLinks.Add(this.btnNewReservation);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.btnActiveReservationList);
+            this.ribbonPageGroup9.ItemLinks.Add(this.btnPassiveReservationList);
+            this.ribbonPageGroup9.ItemLinks.Add(this.btnPassedReservationList);
+            this.ribbonPageGroup9.ItemLinks.Add(this.btnFutureReservationList);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             // 
             // ribbonPage6
             // 
@@ -380,23 +452,6 @@
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // btnReservationList
-            // 
-            this.btnReservationList.Caption = "Rezervasyon Listesi";
-            this.btnReservationList.Id = 21;
-            this.btnReservationList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnReservationList.ImageOptions.Image")));
-            this.btnReservationList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnReservationList.ImageOptions.LargeImage")));
-            this.btnReservationList.Name = "btnReservationList";
-            // 
-            // btnNewReservation
-            // 
-            this.btnNewReservation.Caption = "Rezervasyon Kartı";
-            this.btnNewReservation.Id = 22;
-            this.btnNewReservation.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNewReservation.ImageOptions.Image")));
-            this.btnNewReservation.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNewReservation.ImageOptions.LargeImage")));
-            this.btnNewReservation.Name = "btnNewReservation";
-            this.btnNewReservation.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewReservation_ItemClick);
             // 
             // Form1
             // 
@@ -456,6 +511,11 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem btnReservationList;
         private DevExpress.XtraBars.BarButtonItem btnNewReservation;
+        private DevExpress.XtraBars.BarButtonItem btnActiveReservationList;
+        private DevExpress.XtraBars.BarButtonItem btnPassiveReservationList;
+        private DevExpress.XtraBars.BarButtonItem btnPassedReservationList;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.BarButtonItem btnFutureReservationList;
     }
 }
 

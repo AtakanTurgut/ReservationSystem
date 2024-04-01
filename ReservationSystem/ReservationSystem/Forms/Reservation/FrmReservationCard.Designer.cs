@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReservationCard));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.numericUpPeopleCount = new System.Windows.Forms.NumericUpDown();
+            this.lookUpCustomer = new DevExpress.XtraEditors.LookUpEdit();
             this.dateEditQuittingDate = new DevExpress.XtraEditors.DateEdit();
             this.dateEditStatingDate = new DevExpress.XtraEditors.DateEdit();
             this.lookUpEditRoom = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEditStatus = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -42,12 +43,11 @@
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.lookUpCustomer = new DevExpress.XtraEditors.LookUpEdit();
-            this.numericUpPeopleCount = new System.Windows.Forms.NumericUpDown();
+            this.lookUpEditStatus = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit13 = new DevExpress.XtraEditors.PictureEdit();
@@ -65,20 +65,20 @@
             this.pictureEdit11 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpPeopleCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpCustomer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditQuittingDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditQuittingDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditStatingDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditStatingDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditRoom.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpCustomer.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpPeopleCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditStatus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit13.Properties)).BeginInit();
@@ -117,6 +117,25 @@
             this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "groupControl1";
             // 
+            // numericUpPeopleCount
+            // 
+            this.numericUpPeopleCount.Location = new System.Drawing.Point(121, 43);
+            this.numericUpPeopleCount.Name = "numericUpPeopleCount";
+            this.numericUpPeopleCount.Size = new System.Drawing.Size(120, 21);
+            this.numericUpPeopleCount.TabIndex = 24;
+            // 
+            // lookUpCustomer
+            // 
+            this.lookUpCustomer.Location = new System.Drawing.Point(121, 12);
+            this.lookUpCustomer.Name = "lookUpCustomer";
+            this.lookUpCustomer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpCustomer.Properties.DisplayMember = "NameSurname";
+            this.lookUpCustomer.Properties.NullText = "Müşteri Seçin";
+            this.lookUpCustomer.Properties.ValueMember = "CustomerId";
+            this.lookUpCustomer.Size = new System.Drawing.Size(328, 20);
+            this.lookUpCustomer.TabIndex = 23;
+            // 
             // dateEditQuittingDate
             // 
             this.dateEditQuittingDate.EditValue = null;
@@ -152,18 +171,6 @@
             this.lookUpEditRoom.Properties.ValueMember = "RoomId";
             this.lookUpEditRoom.Size = new System.Drawing.Size(122, 20);
             this.lookUpEditRoom.TabIndex = 20;
-            // 
-            // lookUpEditStatus
-            // 
-            this.lookUpEditStatus.Location = new System.Drawing.Point(327, 38);
-            this.lookUpEditStatus.Name = "lookUpEditStatus";
-            this.lookUpEditStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEditStatus.Properties.DisplayMember = "StatusName";
-            this.lookUpEditStatus.Properties.NullText = "Durum Seçin";
-            this.lookUpEditStatus.Properties.ValueMember = "StatusId";
-            this.lookUpEditStatus.Size = new System.Drawing.Size(122, 20);
-            this.lookUpEditStatus.TabIndex = 19;
             // 
             // labelControl7
             // 
@@ -249,27 +256,6 @@
             this.pictureEdit4.Size = new System.Drawing.Size(20, 20);
             this.pictureEdit4.TabIndex = 8;
             // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(275, 41);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(31, 13);
-            this.labelControl3.TabIndex = 7;
-            this.labelControl3.Text = "Durum";
-            // 
-            // pictureEdit3
-            // 
-            this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(249, 38);
-            this.pictureEdit3.Name = "pictureEdit3";
-            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit3.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit3.TabIndex = 6;
-            // 
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(43, 16);
@@ -291,24 +277,38 @@
             this.pictureEdit1.Size = new System.Drawing.Size(20, 20);
             this.pictureEdit1.TabIndex = 0;
             // 
-            // lookUpCustomer
+            // lookUpEditStatus
             // 
-            this.lookUpCustomer.Location = new System.Drawing.Point(121, 12);
-            this.lookUpCustomer.Name = "lookUpCustomer";
-            this.lookUpCustomer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lookUpEditStatus.Location = new System.Drawing.Point(327, 39);
+            this.lookUpEditStatus.Name = "lookUpEditStatus";
+            this.lookUpEditStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpCustomer.Properties.DisplayMember = "RoomNo";
-            this.lookUpCustomer.Properties.NullText = "Oda Seçin";
-            this.lookUpCustomer.Properties.ValueMember = "RoomId";
-            this.lookUpCustomer.Size = new System.Drawing.Size(328, 20);
-            this.lookUpCustomer.TabIndex = 23;
+            this.lookUpEditStatus.Properties.DisplayMember = "StatusName";
+            this.lookUpEditStatus.Properties.NullText = "Durum Seçin";
+            this.lookUpEditStatus.Properties.ValueMember = "StatusId";
+            this.lookUpEditStatus.Size = new System.Drawing.Size(122, 20);
+            this.lookUpEditStatus.TabIndex = 19;
             // 
-            // numericUpPeopleCount
+            // labelControl3
             // 
-            this.numericUpPeopleCount.Location = new System.Drawing.Point(121, 43);
-            this.numericUpPeopleCount.Name = "numericUpPeopleCount";
-            this.numericUpPeopleCount.Size = new System.Drawing.Size(120, 21);
-            this.numericUpPeopleCount.TabIndex = 24;
+            this.labelControl3.Location = new System.Drawing.Point(275, 43);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(31, 13);
+            this.labelControl3.TabIndex = 7;
+            this.labelControl3.Text = "Durum";
+            // 
+            // pictureEdit3
+            // 
+            this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
+            this.pictureEdit3.Location = new System.Drawing.Point(249, 39);
+            this.pictureEdit3.Name = "pictureEdit3";
+            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit3.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit3.TabIndex = 6;
             // 
             // groupControl2
             // 
@@ -404,6 +404,7 @@
             this.btnCreate.Size = new System.Drawing.Size(125, 40);
             this.btnCreate.TabIndex = 2;
             this.btnCreate.Text = "Kaydet";
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnSave
             // 
@@ -422,6 +423,7 @@
             this.btnClose.Size = new System.Drawing.Size(125, 40);
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Vazgeç";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // groupControl5
             // 
@@ -478,23 +480,24 @@
             this.Name = "FrmReservationCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rezervasyon Kartı";
+            this.Load += new System.EventHandler(this.FrmReservationCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpPeopleCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpCustomer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditQuittingDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditQuittingDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditStatingDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditStatingDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditRoom.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpCustomer.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpPeopleCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditStatus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();

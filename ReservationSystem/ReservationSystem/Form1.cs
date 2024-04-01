@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReservationSystem.Forms.Product;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -140,6 +141,41 @@ namespace ReservationSystem
         {
             Forms.Reservation.FrmReservationCard FrmReservationCard = new Forms.Reservation.FrmReservationCard();
             FrmReservationCard.Show();
+        }
+
+        private void btnReservationList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Reservation.FrmReservationList FrmReservationList = new Forms.Reservation.FrmReservationList();
+            FrmReservationList.MdiParent = this;
+            FrmReservationList.Show();
+        }
+
+        private void btnActiveReservationList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Reservation.FrmActiveReservationList FrmActiveReservationList = new Forms.Reservation.FrmActiveReservationList();
+            FrmActiveReservationList.MdiParent = this;
+            FrmActiveReservationList.Show();
+        }
+
+        private void btnPassiveReservationList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Reservation.FrmPassiveReservationList FrmPassiveReservationList = new Forms.Reservation.FrmPassiveReservationList();
+            FrmPassiveReservationList.MdiParent = this;
+            FrmPassiveReservationList.Show();
+        }
+
+        private void btnPassedReservationList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Reservation.FrmPassedReservationList FrmPassedReservationList = new Forms.Reservation.FrmPassedReservationList();
+            FrmPassedReservationList.MdiParent = this;
+            FrmPassedReservationList.Show();
+        }
+
+        private void btnFutureReservationList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Reservation.FrmFutureReservationList FrmFutureReservationList = new Forms.Reservation.FrmFutureReservationList();
+            FrmFutureReservationList.MdiParent = this;
+            FrmFutureReservationList.Show();
         }
     }
 }

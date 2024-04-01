@@ -99,3 +99,8 @@ C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Product.FrmProductOutputMovements.resources
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Product.FrmProductMovement.resources
 C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Reservation.FrmReservationCard.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Reservation.FrmActiveReservationList.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Reservation.FrmPassedReservationList.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Reservation.FrmPassiveReservationList.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Reservation.FrmReservationList.resources
+C:\Users\Excalibur\Desktop\ReservationSystem\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.Forms.Reservation.FrmFutureReservationList.resources
