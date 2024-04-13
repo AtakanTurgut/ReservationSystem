@@ -152,6 +152,9 @@
           <Property Name="People" Type="char" MaxLength="1" />
           <Property Name="RoomId" Type="int" />
           <Property Name="ReservationNameSurname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Person2" Type="int" />
+          <Property Name="Person3" Type="int" />
+          <Property Name="Person4" Type="int" />
           <Property Name="Phone" Type="nvarchar" MaxLength="20" />
           <Property Name="Description" Type="nvarchar" MaxLength="250" />
           <Property Name="StatusId" Type="int" />
@@ -1288,6 +1291,9 @@
           <NavigationProperty Name="Customers" Relationship="HotelDbModel.FK_Reservations_Customers" FromRole="Reservations" ToRole="Customers" />
           <NavigationProperty Name="Rooms" Relationship="HotelDbModel.FK_Reservations_Rooms" FromRole="Reservations" ToRole="Rooms" />
           <NavigationProperty Name="Statuses" Relationship="HotelDbModel.FK_Reservations_Statuses" FromRole="Reservations" ToRole="Statuses" />
+          <Property Name="Person2" Type="Int32" />
+          <Property Name="Person3" Type="Int32" />
+          <Property Name="Person4" Type="Int32" />
         </EntityType>
         <Association Name="FK_Reservations_Customers">
           <End Type="HotelDbModel.Customers" Role="Customers" Multiplicity="0..1" />
@@ -1532,6 +1538,9 @@
           <EntitySetMapping Name="Reservations">
             <EntityTypeMapping TypeName="HotelDbModel.Reservations">
               <MappingFragment StoreEntitySet="Reservations">
+                <ScalarProperty Name="Person4" ColumnName="Person4" />
+                <ScalarProperty Name="Person3" ColumnName="Person3" />
+                <ScalarProperty Name="Person2" ColumnName="Person2" />
                 <ScalarProperty Name="StatusId" ColumnName="StatusId" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />

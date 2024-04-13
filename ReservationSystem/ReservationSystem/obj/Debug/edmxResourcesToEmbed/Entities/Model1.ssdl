@@ -147,6 +147,9 @@
     <Property Name="People" Type="char" MaxLength="1" />
     <Property Name="RoomId" Type="int" />
     <Property Name="ReservationNameSurname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Person2" Type="int" />
+    <Property Name="Person3" Type="int" />
+    <Property Name="Person4" Type="int" />
     <Property Name="Phone" Type="nvarchar" MaxLength="20" />
     <Property Name="Description" Type="nvarchar" MaxLength="250" />
     <Property Name="StatusId" Type="int" />

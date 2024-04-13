@@ -44,5 +44,12 @@ namespace ReservationSystem.Forms.Reservation
             bindingSource.RemoveCurrent();
             db.SaveChanges();
         }
-    }
+
+		private void gridView1_DoubleClick(object sender, EventArgs e)
+		{
+			FrmReservationCard FrmReservationCard = new FrmReservationCard();
+			FrmReservationCard.id = int.Parse(gridView1.GetFocusedRowCellValue("ReservationId").ToString());
+			FrmReservationCard.Show();
+		}
+	}
 }

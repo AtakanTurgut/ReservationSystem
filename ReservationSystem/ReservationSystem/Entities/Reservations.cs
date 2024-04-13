@@ -24,6 +24,9 @@ namespace ReservationSystem.Entities
         public string Phone { get; set; }
         public string Description { get; set; }
         public Nullable<int> StatusId { get; set; }
+        public Nullable<int> Person2 { get; set; }
+        public Nullable<int> Person3 { get; set; }
+        public Nullable<int> Person4 { get; set; }
     
         public virtual Customers Customers { get; set; }
         public virtual Rooms Rooms { get; set; }

@@ -28,75 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.rezervasyonSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vazgeçToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            this.contextMenuStrip.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.DataSource = this.bindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1034, 301);
-            this.gridControl1.TabIndex = 2;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+			this.components = new System.ComponentModel.Container();
+			this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+			this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.rezervasyonSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.vazgeçToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+			this.contextMenuStrip.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// gridControl1
+			// 
+			this.gridControl1.DataSource = this.bindingSource;
+			this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.gridControl1.Location = new System.Drawing.Point(0, 0);
+			this.gridControl1.MainView = this.gridView1;
+			this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.gridControl1.Name = "gridControl1";
+			this.gridControl1.Size = new System.Drawing.Size(1379, 370);
+			this.gridControl1.TabIndex = 2;
+			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowFooter = true;
-            // 
-            // contextMenuStrip
-            // 
-            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			// 
+			// gridView1
+			// 
+			this.gridView1.DetailHeight = 431;
+			this.gridView1.GridControl = this.gridControl1;
+			this.gridView1.Name = "gridView1";
+			this.gridView1.OptionsEditForm.PopupEditFormWidth = 1067;
+			this.gridView1.OptionsView.ShowFooter = true;
+			this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
+			// 
+			// contextMenuStrip
+			// 
+			this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+			this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rezervasyonSilToolStripMenuItem,
             this.vazgeçToolStripMenuItem});
-            this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(181, 70);
-            // 
-            // rezervasyonSilToolStripMenuItem
-            // 
-            this.rezervasyonSilToolStripMenuItem.Name = "rezervasyonSilToolStripMenuItem";
-            this.rezervasyonSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rezervasyonSilToolStripMenuItem.Text = "Rezervasyonu Sil";
-            this.rezervasyonSilToolStripMenuItem.Click += new System.EventHandler(this.rezervasyonSilToolStripMenuItem_Click);
-            // 
-            // vazgeçToolStripMenuItem
-            // 
-            this.vazgeçToolStripMenuItem.Name = "vazgeçToolStripMenuItem";
-            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.vazgeçToolStripMenuItem.Text = "Vazgeç";
-            // 
-            // FrmReservationList
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 301);
-            this.ContextMenuStrip = this.contextMenuStrip;
-            this.Controls.Add(this.gridControl1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "FrmReservationList";
-            this.Text = "Rezervasyon Listesi";
-            this.Load += new System.EventHandler(this.FrmReservationList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            this.contextMenuStrip.ResumeLayout(false);
-            this.ResumeLayout(false);
+			this.contextMenuStrip.Name = "contextMenuStrip";
+			this.contextMenuStrip.Size = new System.Drawing.Size(189, 52);
+			// 
+			// rezervasyonSilToolStripMenuItem
+			// 
+			this.rezervasyonSilToolStripMenuItem.Name = "rezervasyonSilToolStripMenuItem";
+			this.rezervasyonSilToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
+			this.rezervasyonSilToolStripMenuItem.Text = "Rezervasyonu Sil";
+			this.rezervasyonSilToolStripMenuItem.Click += new System.EventHandler(this.rezervasyonSilToolStripMenuItem_Click);
+			// 
+			// vazgeçToolStripMenuItem
+			// 
+			this.vazgeçToolStripMenuItem.Name = "vazgeçToolStripMenuItem";
+			this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
+			this.vazgeçToolStripMenuItem.Text = "Vazgeç";
+			// 
+			// FrmReservationList
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(1379, 370);
+			this.ContextMenuStrip = this.contextMenuStrip;
+			this.Controls.Add(this.gridControl1);
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
+			this.Name = "FrmReservationList";
+			this.Text = "Rezervasyon Listesi";
+			this.Load += new System.EventHandler(this.FrmReservationList_Load);
+			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+			this.contextMenuStrip.ResumeLayout(false);
+			this.ResumeLayout(false);
 
         }
 

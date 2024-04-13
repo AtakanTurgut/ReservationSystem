@@ -202,6 +202,9 @@
     <EntitySetMapping Name="Reservations">
       <EntityTypeMapping TypeName="HotelDbModel.Reservations">
         <MappingFragment StoreEntitySet="Reservations">
+          <ScalarProperty Name="Person4" ColumnName="Person4" />
+          <ScalarProperty Name="Person3" ColumnName="Person3" />
+          <ScalarProperty Name="Person2" ColumnName="Person2" />
           <ScalarProperty Name="StatusId" ColumnName="StatusId" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />

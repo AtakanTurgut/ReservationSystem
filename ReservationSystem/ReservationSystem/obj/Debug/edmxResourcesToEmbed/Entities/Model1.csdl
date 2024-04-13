@@ -647,6 +647,9 @@
     <NavigationProperty Name="Customers" Relationship="HotelDbModel.FK_Reservations_Customers" FromRole="Reservations" ToRole="Customers" />
     <NavigationProperty Name="Rooms" Relationship="HotelDbModel.FK_Reservations_Rooms" FromRole="Reservations" ToRole="Rooms" />
     <NavigationProperty Name="Statuses" Relationship="HotelDbModel.FK_Reservations_Statuses" FromRole="Reservations" ToRole="Statuses" />
+    <Property Name="Person2" Type="Int32" />
+    <Property Name="Person3" Type="Int32" />
+    <Property Name="Person4" Type="Int32" />
   </EntityType>
   <Association Name="FK_Reservations_Customers">
     <End Type="HotelDbModel.Customers" Role="Customers" Multiplicity="0..1" />
