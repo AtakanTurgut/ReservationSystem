@@ -213,5 +213,25 @@ namespace ReservationSystem
         {
             System.Diagnostics.Process.Start("excel");
         }
-    }
+
+		private void btnMainForm_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			Forms.MainForm.FrmMainForm FrmMainForm = new Forms.MainForm.FrmMainForm();
+			FrmMainForm.MdiParent = this;
+			FrmMainForm.Show();
+		}
+		private void btnGraphicProductStock_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			Forms.Graphics.FrmGraphicProductStock FrmGraphicProductStock = new Forms.Graphics.FrmGraphicProductStock();
+			FrmGraphicProductStock.MdiParent = this;
+			FrmGraphicProductStock.Show();
+		}
+
+		private void btnGraphicRoomStatus_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			Forms.Graphics.FrmGraphicRoomStatus FrmGraphicRoomStatus = new Forms.Graphics.FrmGraphicRoomStatus();
+			FrmGraphicRoomStatus.MdiParent = this;
+			FrmGraphicRoomStatus.Show();
+		}
+	}
 }

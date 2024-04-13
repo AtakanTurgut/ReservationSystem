@@ -12,6 +12,8 @@ namespace ReservationSystem.Entities
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class HotelDbEntities : DbContext
     {
@@ -43,5 +45,10 @@ namespace ReservationSystem.Entities
         public virtual DbSet<Towns> Towns { get; set; }
         public virtual DbSet<ProductMovements> ProductMovements { get; set; }
         public virtual DbSet<Reservations> Reservations { get; set; }
+    
+        public virtual ObjectResult<ChartRoomStatus_Result> ChartRoomStatus()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ChartRoomStatus_Result>("ChartRoomStatus");
+        }
     }
 }

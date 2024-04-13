@@ -516,6 +516,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="ChartRoomStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="HotelDbModelStoreContainer">
           <EntitySet Name="Cases" EntityType="Self.Cases" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
@@ -1194,6 +1195,7 @@
             <End Role="Statuses" EntitySet="Statuses" />
             <End Role="Reservations" EntitySet="Reservations" />
           </AssociationSet>
+          <FunctionImport Name="ChartRoomStatus" ReturnType="Collection(HotelDbModel.ChartRoomStatus_Result)" />
         </EntityContainer>
         <EntityType Name="Cities">
           <Key>
@@ -1331,6 +1333,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="ChartRoomStatus_Result">
+          <Property Type="String" Name="StatusName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Count" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1554,6 +1560,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="ChartRoomStatus" FunctionName="HotelDbModel.Store.ChartRoomStatus">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HotelDbModel.ChartRoomStatus_Result">
+                <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

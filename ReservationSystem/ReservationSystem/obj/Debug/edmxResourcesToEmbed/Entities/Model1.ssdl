@@ -511,6 +511,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="ChartRoomStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="HotelDbModelStoreContainer">
     <EntitySet Name="Cases" EntityType="Self.Cases" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />

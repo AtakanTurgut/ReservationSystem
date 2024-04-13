@@ -550,6 +550,7 @@
       <End Role="Statuses" EntitySet="Statuses" />
       <End Role="Reservations" EntitySet="Reservations" />
     </AssociationSet>
+    <FunctionImport Name="ChartRoomStatus" ReturnType="Collection(HotelDbModel.ChartRoomStatus_Result)" />
   </EntityContainer>
   <EntityType Name="Cities">
     <Key>
@@ -687,4 +688,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <ComplexType Name="ChartRoomStatus_Result">
+    <Property Type="String" Name="StatusName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Count" Nullable="true" />
+  </ComplexType>
 </Schema>
